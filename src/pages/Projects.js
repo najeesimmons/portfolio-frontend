@@ -4,18 +4,26 @@ function Projects(props) {
   // create state to hold projects
   const [projects, setProjects] = useState(null);
 
+  useEffect(() => {
   //create function to make api call
   const getProjectsData = async () => {
-    //make api call and get response
-    const response = await fetch(props.URL + "projects");
-    // turn response into javascript object
-    const data = await response.json();
-    // set the projects state to the data
-    setProjects(data);
-  };
+    try {
+      console.log(props.URL)
+      // make api call and get response
+  const response = await fetch(props.URL + "Projects");
+  console.log(response)
+  // turn response into javascript object
+  const data = await response.json();
 
-  // make an initial call for the data inside a useEffect, so it only happens once on component load
-  useEffect(() => getProjectsData(), []);
+  // set the about state to the data
+  setProjects(data);
+  } catch (error) {
+      console.error(error)
+  }
+};
+
+  
+  getProjectsData()}, [props.URL]);
 
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
@@ -33,6 +41,7 @@ function Projects(props) {
     ));
   };
 
+   // if data arrives return the result of loaded, if not, an h1 that says loading
   return projects ? loaded() : <h1>Loading...</h1>;
 }
 
