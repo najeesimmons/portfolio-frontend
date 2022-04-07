@@ -28,7 +28,8 @@ function Projects(props) {
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
     return projects.map((project) => (
-      <div>
+      <div className="projects">
+        <div className="container">
         <h1>{project.name}</h1>
         <img src={project.image} alt={project.name} />
         <a href={project.git}>
@@ -37,6 +38,7 @@ function Projects(props) {
         <a href={project.live}>
           <button>live site</button>
         </a>
+        </div>
       </div>
     ));
   };

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 
 function Header(props) {
   //inline style for the nav tag
@@ -15,15 +15,8 @@ function Header(props) {
     <header>
       <h1>My Portfolio Page</h1>
       <nav style={navStyle}>
-        <Link to="/">
-          <div>HOME</div>
-        </Link>
-        <Link to="/about">
-          <div>ABOUT</div>
-        </Link>
-        <Link to="/projects">
-          <div>PROJECTS</div>
-        </Link>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
       </nav>
     </header>
   );

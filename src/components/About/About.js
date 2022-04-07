@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import {Title} from "./About.styles"
 
-function About(props) {
+export const About = ({url}) => {
+  // const {url} = props
   // create state to hold about data
   const [about, setAbout] = useState(null);
 
@@ -8,9 +10,9 @@ function About(props) {
       // create function to make api call
       const getAboutData = async () => {
         try {
-            console.log(props.URL)
+            console.log(url)
             // make api call and get response
-        const response = await fetch(props.URL + "about");
+        const response = await fetch(url + "about");
         console.log(response)
         // turn response into javascript object
         const data = await response.json();
@@ -23,12 +25,12 @@ function About(props) {
       };
       
       
-      getAboutData()}, [props.URL]);
+      getAboutData()}, [url]);
       
       // define a function that will return the JSX needed once we get the data
       const loaded = () => (
           <div>
-      <h2>{about.name}</h2>
+      <Title isBob={about.name==="Bob Smith"}>{about.name}</Title>
       <h3>{about.email}</h3>
       <p>{about.bio}</p>
     </div>
@@ -37,5 +39,3 @@ function About(props) {
   // if data arrives return the result of loaded, if not, an h1 that says loading
   return about ? loaded() : <h1>Loading...</h1>;
 }
-
-export default About;
