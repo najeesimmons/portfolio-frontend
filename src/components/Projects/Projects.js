@@ -32,6 +32,7 @@ export const Projects = ({url}) => {
       <div className="projects">
         <div className="container">
         <h1>{project.name}</h1>
+        <p>{project.description}</p>
         <img src={project.image} alt={project.name} />
         <a href={project.git}>
           <button>Github</button>
