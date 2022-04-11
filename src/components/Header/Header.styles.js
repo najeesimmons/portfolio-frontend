@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const NavBar = styled.ul`
     list-style-type: none;
-    margin: 0;
+    margin: 0px 0px 20px 0px;
     padding: 0;
     overflow: hidden;
     background-color: #333;
