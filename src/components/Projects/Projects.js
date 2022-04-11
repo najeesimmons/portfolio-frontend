@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, ProjectInfo, ProjectImage, ProjectButtons } from "./Projects.styles";
+import { Container, ProjectInfo, ProjectImage, ProjectIcons, ProjectButtons } from "./Projects.styles";
 
 
 export const Projects = ({url}) => {
@@ -39,6 +39,8 @@ export const Projects = ({url}) => {
             <a href={project.live}><button>live site</button></a>
             </ProjectButtons>
               <p>{project.description}</p>
+            <ProjectIcons>
+            </ProjectIcons>
           </ProjectInfo>
           <ProjectImage>
             <img src={project.image} alt={project.name} />

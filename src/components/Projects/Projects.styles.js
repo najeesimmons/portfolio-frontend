@@ -11,7 +11,8 @@ export const ProjectInfo = styled.div`
     text-align: left;
     padding: 15px;
 `
-
+export const ProjectIcons = styled.div`
+`
 export const ProjectImage = styled.div`
     height: 320px;
     width: 550px;
