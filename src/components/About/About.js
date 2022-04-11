@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import {Title} from "./About.styles"
+import {Title, Headshot} from "./About.styles"
 
 export const About = ({url}) => {
   // create state to hold about data
   const [about, setAbout] = useState(null);
+
 
   useEffect(() => {
       // create function to make api call
@@ -29,10 +30,15 @@ export const About = ({url}) => {
       // define a function that will return the JSX needed once we get the data
       const loaded = () => (
           <div>
-            <img src={about.headshot} alt={about.name} />
-            <Title isBob={about.name==="Bob Smith"}>{about.name}</Title>
+            <Headshot>
+              <img src={about.headshot} alt={about.name} />
+            </Headshot>
+            <Title 
+              isBob={about.name==="Najee Simmons"}>{about.name}
+            </Title>
             <h3>{about.email}</h3>
             <p>{about.bio}</p>
+            <br></br>
           </div>
   );
 
