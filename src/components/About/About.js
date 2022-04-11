@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {Title, Headshot} from "./About.styles"
+import {Bio, Headshot} from "./About.styles"
 
 export const About = ({url}) => {
   // create state to hold about data
@@ -33,11 +33,11 @@ export const About = ({url}) => {
             <Headshot>
               <img src={about.headshot} alt={about.name} />
             </Headshot>
-            <Title 
-              isBob={about.name==="Najee Simmons"}>{about.name}
-            </Title>
-            <h3>{about.email}</h3>
-            <p>{about.bio}</p>
+            <Bio>
+              <h1>{about.name}</h1>
+              <h3>{about.email}</h3>
+              <p>{about.bio}</p>
+            </Bio>
             <br></br>
           </div>
   );
