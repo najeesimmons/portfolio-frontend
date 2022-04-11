@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Container, ProjectInfo, ProjectImage, ProjectButtons } from "./Projects.styles";
 
 
 export const Projects = ({url}) => {
@@ -29,18 +30,21 @@ export const Projects = ({url}) => {
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
     return projects.map((project) => (
-      <div className="projects">
-        <div className="container">
-        <h1>{project.name}</h1>
-        <p>{project.description}</p>
-        <img src={project.image} alt={project.name} />
-        <a href={project.git}>
-          <button>Github</button>
-        </a>
-        <a href={project.live}>
-          <button>live site</button>
-        </a>
-        </div>
+      <div>
+        <Container>
+          <ProjectInfo>
+            <h1>{project.name}</h1>
+            <ProjectButtons>
+            <a href={project.git}><button>Github</button></a>
+            <a href={project.live}><button>live site</button></a>
+            </ProjectButtons>
+              <p>{project.description}</p>
+          </ProjectInfo>
+          <ProjectImage>
+            <img src={project.image} alt={project.name} />
+          </ProjectImage>
+        </Container>
+          
       </div>
     ));
   };
