@@ -1,29 +1,30 @@
 import { useState, useEffect } from "react";
 
-function Projects(props) {
+
+export const Projects = ({url}) => {
   // create state to hold projects
   const [projects, setProjects] = useState(null);
 
   useEffect(() => {
-  //create function to make api call
-  const getProjectsData = async () => {
-    try {
-      console.log(props.URL)
-      // make api call and get response
-  const response = await fetch(props.URL + "Projects");
-  console.log(response)
-  // turn response into javascript object
-  const data = await response.json();
+      //create function to make api call
+      const getProjectsData = async () => {
+        try {
+          console.log(url)
+          // make api call and get response
+      const response = await fetch(url + "Projects");
+      console.log(response)
+      // turn response into javascript object
+      const data = await response.json();
 
-  // set the about state to the data
-  setProjects(data);
-  } catch (error) {
-      console.error(error)
-  }
-};
+      // set the about state to the data
+      setProjects(data);
+      } catch (error) {
+          console.error(error)
+      }
+    };
 
   
-  getProjectsData()}, [props.URL]);
+  getProjectsData()}, [url]);
 
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {

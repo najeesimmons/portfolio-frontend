@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import {Title} from "./About.styles"
 
 export const About = ({url}) => {
-  // const {url} = props
   // create state to hold about data
   const [about, setAbout] = useState(null);
 

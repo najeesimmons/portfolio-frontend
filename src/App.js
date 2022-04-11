@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      {/* passing the URL variable above as props to the About and Project components */}
         <About url={URL}  />
         <Projects url={URL} />
       <Footer />
