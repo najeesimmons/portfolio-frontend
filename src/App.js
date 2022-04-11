@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 // IMPORT PAGES
 import {About} from "./components/About";
-import Projects from "./components/Projects";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   // URL should have YOUR HEROKU URL for your backend, make sure you include the trailing slash
