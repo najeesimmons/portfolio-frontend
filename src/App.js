@@ -1,7 +1,7 @@
 import "./App.css";
 
 // IMPORT COMPONENTS
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
 // IMPORT PAGES
 import {About} from "./components/About";
