@@ -29,10 +29,11 @@ export const About = ({url}) => {
       // define a function that will return the JSX needed once we get the data
       const loaded = () => (
           <div>
-      <Title isBob={about.name==="Bob Smith"}>{about.name}</Title>
-      <h3>{about.email}</h3>
-      <p>{about.bio}</p>
-    </div>
+            <img src={about.headshot} alt={about.name} />
+            <Title isBob={about.name==="Bob Smith"}>{about.name}</Title>
+            <h3>{about.email}</h3>
+            <p>{about.bio}</p>
+          </div>
   );
 
   // if data arrives return the result of loaded, if not, an h1 that says loading
