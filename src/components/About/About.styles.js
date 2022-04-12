@@ -2,15 +2,21 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns:1fr 1fr; 
+  grid-template-columns:1fr 1fr 1fr 1fr; 
   grid-column-gap: 5px;
 `;
 export const MyInfo = styled.span`
 
   h1 {
     padding: 0;
+    // float: left;
   }
-  `
+
+  h3 {
+    float: left;
+    padding: 0;
+  }
+  `;
 export const AboutMe = styled.div`
   font-size: 15px;
   text-align: left;
@@ -18,6 +24,7 @@ export const AboutMe = styled.div`
 `;
 
 export const Bio = styled.span`
+  float: left;
  `
 export const Headshot = styled.div`
   height: 400px;

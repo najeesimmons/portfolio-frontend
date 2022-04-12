@@ -32,6 +32,8 @@ export const Projects = ({url}) => {
     return projects.map((project) => (
       <div>
         <Container>
+          <div>
+          </div>
           <ProjectInfo>
             <h1>{project.name}</h1>
             <ProjectButtons>
@@ -45,6 +47,8 @@ export const Projects = ({url}) => {
           <ProjectImage>
             <img src={project.image} alt={project.name} />
           </ProjectImage>
+          <div>
+          </div>
         </Container>
   
           

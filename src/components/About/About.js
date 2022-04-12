@@ -41,6 +41,8 @@ export const About = ({url}) => {
             </MyInfo>
               <Bio>{about.bio}</Bio>
             </AboutMe>
+            <div>
+            </div>
           </Container>
           <Break></Break>
           </div>
