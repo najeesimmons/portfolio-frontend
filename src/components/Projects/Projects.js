@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, ProjectInfo, ProjectImage, ProjectIcons, ProjectButtons } from "./Projects.styles";
+import { Container, ProjectInfo, ProjectImage, ProjectIcons, ProjectLinks } from "./Projects.styles";
 
 
 export const Projects = ({url}) => {
@@ -32,14 +32,12 @@ export const Projects = ({url}) => {
     return projects.map((project) => (
       <div>
         <Container>
-          <div>
-          </div>
           <ProjectInfo>
             <h1>{project.name}</h1>
-            <ProjectButtons>
-            <a href={project.git}><button>Github</button></a>
-            <a href={project.live}><button>live site</button></a>
-            </ProjectButtons>
+            <ProjectLinks>
+                <a href={project.git}>GITHUB</a>
+                <a href={project.live}>LIVE SITE</a>
+            </ProjectLinks>
               <p>{project.description}</p>
             <ProjectIcons>
             </ProjectIcons>
@@ -47,11 +45,7 @@ export const Projects = ({url}) => {
           <ProjectImage>
             <img src={project.image} alt={project.name} />
           </ProjectImage>
-          <div>
-          </div>
         </Container>
-  
-          
       </div>
     ));
   };

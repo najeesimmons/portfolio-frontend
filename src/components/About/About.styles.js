@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 3fr 1fr; 
+  grid-template-columns: 1fr 1fr; 
   grid-column-gap: 5px;
-  margin-top: 70px;
+  margin: 70px auto 0;
+  max-width: 1000px;
+
 `;
 export const MyInfo = styled.span`
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');

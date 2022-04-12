@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 // IMPORT PAGES
 import {About} from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import { AppWrapper } from "./App.styles";
 
 function App() {
   // URL should have YOUR HEROKU URL for your backend, make sure you include the trailing slash
@@ -14,9 +15,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* passing the URL variable above as props to the About and Project components */}
-        <About url={URL}  />
-        <Projects url={URL} />
+        <AppWrapper>
+        {/* passing the URL variable above as props to the About and Project components */}
+          <About url={URL}  />
+          <Projects url={URL} />
+        </AppWrapper>
       <Footer />
     </div>
   );
