@@ -14,7 +14,7 @@ export const MyInfo = styled.span`
 export const AboutMe = styled.div`
   font-size: 15px;
   text-align: left;
-  padding: 30px;
+  padding: 30px; 
 `;
 
 export const Bio = styled.span`
@@ -31,3 +31,15 @@ export const Headshot = styled.div`
    
   }
   `;
+
+  export const Break = styled.hr`
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 50%;
+
+`;

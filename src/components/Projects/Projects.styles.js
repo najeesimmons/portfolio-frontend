@@ -10,21 +10,21 @@ export const Container = styled.div`
 export const ProjectInfo = styled.div`
     text-align: left;
     padding: 15px;
-`
+`;
 export const ProjectIcons = styled.div`
-`
+`;
 export const ProjectImage = styled.div`
     height: 320px;
     width: 550px;
     margin-left: auto;
     margin-right: auto;
-    // padding: 0;
     border: 5px solid #333;
 
 img {
     height: 100%;
     width: 100%;
-}`
+}`;
 
 export const ProjectButtons = styled.div`
-`
+`;
+

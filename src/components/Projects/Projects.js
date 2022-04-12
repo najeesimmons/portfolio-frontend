@@ -46,6 +46,7 @@ export const Projects = ({url}) => {
             <img src={project.image} alt={project.name} />
           </ProjectImage>
         </Container>
+  
           
       </div>
     ));

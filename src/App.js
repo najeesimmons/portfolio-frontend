@@ -2,9 +2,9 @@ import "./App.css";
 
 // IMPORT COMPONENTS
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 // IMPORT PAGES
-import {About} from "./components/About";
+import {About} from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 
 function App() {

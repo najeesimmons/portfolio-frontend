@@ -5,7 +5,7 @@ export const NavBar = styled.ul`
     margin: 0px 0px 20px 0px;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: black;
 
     li {
         float: right;
@@ -20,7 +20,7 @@ export const NavBar = styled.ul`
       }
 
       li a:hover {
-        background-color: #111;
+        background-color: #333;
       }
 `;
 

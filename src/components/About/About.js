@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {Container, AboutMe, Headshot, MyInfo, Bio} from "./About.styles"
+import {Container, AboutMe, Headshot, MyInfo, Bio, Break} from "./About.styles"
 
 export const About = ({url}) => {
   // create state to hold about data
@@ -29,6 +29,7 @@ export const About = ({url}) => {
       
       // define a function that will return the JSX needed once we get the data
       const loaded = () => (
+        <div>
           <Container>
             <Headshot>
               <img src={about.headshot} alt={about.name} />
@@ -41,6 +42,8 @@ export const About = ({url}) => {
               <Bio>{about.bio}</Bio>
             </AboutMe>
           </Container>
+          <Break></Break>
+          </div>
   );
 
   // if data arrives return the result of loaded, if not, an h1 that says loading
