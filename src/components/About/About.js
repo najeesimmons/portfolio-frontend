@@ -31,6 +31,8 @@ export const About = ({url}) => {
       const loaded = () => (
         <div>
           <Container>
+            <div>
+            </div>
             <Headshot>
               <img src={about.headshot} alt={about.name} />
             </Headshot>
@@ -41,8 +43,6 @@ export const About = ({url}) => {
             </MyInfo>
               <Bio>{about.bio}</Bio>
             </AboutMe>
-            <div>
-            </div>
           </Container>
           <Break></Break>
           </div>
