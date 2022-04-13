@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, ProjectInfo, ProjectImage, ProjectIcons, ProjectLinks } from "./Projects.styles";
+import './projects.css'
 
 export const Projects = ({url}) => {
       // create state to hold about data
@@ -27,7 +28,7 @@ export const Projects = ({url}) => {
   const loaded = () => {
     return (
       <div>
-        <h1 id="projects">Projects</h1>
+        <h1 id ="projects">Projects</h1>
         {projects.map((project) => (
             <Container>
               <ProjectInfo>

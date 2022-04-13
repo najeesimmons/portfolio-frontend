@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const HeadingStyle = styled.h1`
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+`;
+
+
 export const Container = styled.div`
     display: grid;
     grid-template-columns:1fr 1fr; 
@@ -17,7 +22,7 @@ export const ProjectInfo = styled.div`
     padding: 15px;
 
     h1 {
-        font-size: 45px;
+        font-size: 55px;
         font-weight: 10000;
     }
 `;
