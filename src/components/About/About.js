@@ -5,13 +5,10 @@ export const About = ({url}) => {
   // create state to hold about data
   const [about, setAbout] = useState(null);
 
-
   useEffect(() => {
       // create function to make api call
       const getAboutData = async () => {
         try {
-            console.log(url)
-            // make api call and get response
         const response = await fetch(url + "about");
         console.log(response)
         // turn response into javascript object

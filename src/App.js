@@ -1,4 +1,6 @@
 import "./App.css";
+import { useRef } from "react";
+
 
 // IMPORT COMPONENTS
 import Header from "./components/Header/Header";

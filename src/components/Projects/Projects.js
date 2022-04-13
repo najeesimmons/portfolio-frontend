@@ -1,21 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, forwardRef } from "react";
 import { Container, ProjectInfo, ProjectImage, ProjectIcons, ProjectLinks } from "./Projects.styles";
 
-
 export const Projects = ({url}) => {
-  // create state to hold projects
-  const [projects, setProjects] = useState(null);
+      // create state to hold about data
+      const [projects, setProjects] = useState(null);
 
-  useEffect(() => {
-      //create function to make api call
-      const getProjectsData = async () => {
-        try {
-          console.log(url)
-          // make api call and get response
-      const response = await fetch(url + "Projects");
-      console.log(response)
-      // turn response into javascript object
-      const data = await response.json();
+      useEffect(() => {
+        // create function to make api call
+        const getProjectsData = async () => {
+          try {
+          const response = await fetch(url + "projects");
+          // turn response into javascript object
+          const data = await response.json();
 
       // set the about state to the data
       setProjects(data);
@@ -31,6 +27,7 @@ export const Projects = ({url}) => {
   const loaded = () => {
     return projects.map((project) => (
       <div>
+        <h1>Projects</h1>
         <Container>
           <ProjectInfo>
             <h1>{project.name}</h1>
