@@ -56,5 +56,4 @@ export const Headshot = styled.div`
     border-style: inset;
     border-width: 1px;
     width: 50%;
-
 `;

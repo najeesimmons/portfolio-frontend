@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, forwardRef } from "react";
+import { useState, useEffect } from "react";
 import { Container, ProjectInfo, ProjectImage, ProjectIcons, ProjectLinks } from "./Projects.styles";
 
 export const Projects = ({url}) => {
@@ -25,26 +25,29 @@ export const Projects = ({url}) => {
 
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
-    return projects.map((project) => (
+    return (
       <div>
-        <h1>Projects</h1>
-        <Container>
-          <ProjectInfo>
-            <h1>{project.name}</h1>
-            <ProjectLinks>
-                <a href={project.git}>GITHUB</a>
-                <a href={project.live}>LIVE SITE</a>
-            </ProjectLinks>
-              <p>{project.description}</p>
-            <ProjectIcons>
-            </ProjectIcons>
-          </ProjectInfo>
-          <ProjectImage>
-            <img src={project.image} alt={project.name} />
-          </ProjectImage>
-        </Container>
+        <h1 id="projects">Projects</h1>
+        {projects.map((project) => (
+            <Container>
+              <ProjectInfo>
+                <h1>{project.name}</h1>
+                <ProjectLinks>
+                    <a href={project.git}>GITHUB</a>
+                    <a href={project.live}>LIVE SITE</a>
+                </ProjectLinks>
+                  <p>{project.description}</p>
+                <ProjectIcons>
+                </ProjectIcons>
+              </ProjectInfo>
+              <ProjectImage>
+                <img src={project.image} alt={project.name} />
+              </ProjectImage>
+            </Container>
+            ))}
       </div>
-    ));
+    )
+    
   };
 
    // if data arrives return the result of loaded, if not, an h1 that says loading

@@ -22,11 +22,11 @@ export const About = ({url}) => {
       };
       
       
-      getAboutData()}, [url]);
+  getAboutData()}, [url]);
       
-      // define a function that will return the JSX needed once we get the data
-      const loaded = () => (
-        <div>
+    // define a function that will return the JSX needed once we get the data
+     const loaded = () => (
+      <div id="about">
           <Container>
             <Headshot>
               <img src={about.headshot} alt={about.name} />
@@ -40,7 +40,7 @@ export const About = ({url}) => {
             </AboutMe>
           </Container>
           <Break/>
-          </div>
+        </div>
   );
 
   // if data arrives return the result of loaded, if not, an h1 that says loading
