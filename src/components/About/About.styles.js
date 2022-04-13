@@ -6,11 +6,10 @@ export const Container = styled.div`
   grid-column-gap: 5px;
   margin: 70px auto 0;
   max-width: 1000px;
-
 `;
+
 export const MyInfo = styled.span`
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
-
 
   h1 {
     padding: 0;
@@ -25,6 +24,7 @@ export const MyInfo = styled.span`
     padding: 0;
   }
   `;
+
 export const AboutMe = styled.div`
   font-size: 15px;
   text-align: left;
@@ -33,7 +33,8 @@ export const AboutMe = styled.div`
 
 export const Bio = styled.span`
   float: left;
- `
+ `;
+ 
 export const Headshot = styled.div`
   height: 400px;
   width: 400px;
