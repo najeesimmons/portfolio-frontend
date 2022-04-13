@@ -34,7 +34,7 @@ export const AboutMe = styled.div`
 export const Bio = styled.span`
   float: left;
  `;
- 
+
 export const Headshot = styled.div`
   height: 400px;
   width: 400px;
@@ -42,7 +42,7 @@ export const Headshot = styled.div`
   margin-right: auto;
 
   img {
-    height 100%;
+    height: 100%;
     width: 100%;
    
   }
