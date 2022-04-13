@@ -1,4 +1,4 @@
-import {NavBar, NavBarWrapper} from "./Header.styles"
+import {NavBar, NavBarWrapper} from "./Nav.styles"
 
 function Header() {
 

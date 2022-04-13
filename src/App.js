@@ -2,7 +2,7 @@ import "./App.css";
 
 
 // IMPORT COMPONENTS
-import Header from "./components/Header/Header";
+import Header from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 // IMPORT PAGES
 import {About} from "./components/About/About";
