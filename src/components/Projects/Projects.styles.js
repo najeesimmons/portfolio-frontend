@@ -27,6 +27,12 @@ export const ProjectInfo = styled.div`
     }
 `;
 export const ProjectIcons = styled.div`
+display: flex;
+flex-direction: row;
+img {
+    height:100px;
+    width:100px;
+}
 `;
 export const ProjectImage = styled.div`
     height: 320px;
