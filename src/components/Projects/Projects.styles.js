@@ -24,14 +24,16 @@ export const ProjectInfo = styled.div`
     h1 {
         font-size: 55px;
         font-weight: 10000;
+        margin-bottom: 10px;
     }
 `;
 export const ProjectIcons = styled.div`
 display: flex;
 flex-direction: row;
+margin-bottom: 5px;
 img {
-    height:70px;
-    width:70px;
+    height:65px;
+    width:65px;
 }
 `;
 export const ProjectImage = styled.div`

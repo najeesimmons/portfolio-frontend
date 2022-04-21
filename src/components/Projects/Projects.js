@@ -39,11 +39,6 @@ export const Projects = ({ url }) => {
           <Container key={project.name}>
             <ProjectInfo>
               <h1>{project.name}</h1>
-              <ProjectLinks>
-                <a href={project.git}>GITHUB</a>
-                <a href={project.live}>LIVE SITE</a>
-              </ProjectLinks>
-              <p>{project.description}</p>
               <ProjectIcons>
                 {project?.stack?.map((tech) => {
                   return (
@@ -53,6 +48,11 @@ export const Projects = ({ url }) => {
                   );
                 })}
               </ProjectIcons>
+              <ProjectLinks>
+                <a href={project.git}>GITHUB</a>
+                <a href={project.live}>LIVE SITE</a>
+              </ProjectLinks>
+              <p>{project.description}</p>
             </ProjectInfo>
             <ProjectImage>
               <img src={project.image} alt={project.name} />
