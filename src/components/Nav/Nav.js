@@ -1,7 +1,7 @@
+import React from 'react'
 import classes from "./Nav.module.css";
 
 function Nav() {
-
 
   return (
     <header>

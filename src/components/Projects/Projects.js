@@ -1,6 +1,9 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./projects.css";
 import classes from "./Projects.module.css"
+
+
+
 export const Projects = ({ url }) => {
   // create state to hold about data
   const [projects, setProjects] = useState(null);
@@ -23,17 +26,21 @@ export const Projects = ({ url }) => {
     getProjectsData();
   }, [url]);
 
+  // const projectsList = projects.map(project => {
+
+  // })
+
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
     return (
-      <div>
+      <div className={classes["container-holder"]}>
         <h1 id="projects">Projects</h1>
         {projects.map((project) => (
           <div className={classes.container} key={project.name}>
             <div className={classes["project-info"]}>
               <h1>{project.name}</h1>
               <div className={classes["project-icons"]}>
-                {project?.stack?.map((tech) => {
+                {project.stack.map((tech) => {
                   return (
                     <div key={tech.technology}>
                       <img src={tech.image} alt={tech.technology} />

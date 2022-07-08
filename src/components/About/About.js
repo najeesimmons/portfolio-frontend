@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./About.module.css"
 
 export const About = ({url}) => {
@@ -39,10 +39,11 @@ export const About = ({url}) => {
               <span className={classes.bio}>{about.bio}</span>
             </div>
           </div>
-          <hr className={classes.break}/>
         </div>
   );
 
   // if data arrives return the result of loaded, if not, an h1 that says loading
   return about ? loaded() : <h1>Loading...</h1>;
 }
+
+export default About
