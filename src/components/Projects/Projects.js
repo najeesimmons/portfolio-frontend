@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./projects.css";
 import classes from "./Projects.module.css"
 
 
@@ -33,8 +32,9 @@ export const Projects = ({ url }) => {
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
     return (
-      <div className={classes["container-holder"]}>
-        <h1 id="projects">Projects</h1>
+      <div className={classes.wrapper}>
+        <h1 className={classes["projects-heading"]}>Projects</h1>
+        <div className={classes["container-holder"]}>
         {projects.map((project) => (
           <div className={classes.container} key={project.name}>
             <div className={classes["project-info"]}>
@@ -59,6 +59,7 @@ export const Projects = ({ url }) => {
             </div>
           </div>
         ))}
+        </div>
       </div>
     );
   };

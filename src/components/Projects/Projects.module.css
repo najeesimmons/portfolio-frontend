@@ -1,10 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-heading {
+    font-family: 'Noto Serif', serif;
+    font-size: 45px;
+    margin-bottom: 70px; 
+    text-align: center;
+}
 
 .container-holder {
     display: flex;
 }
+
 .container {
     display: grid;
     grid-template-columns:1fr 1fr; 
@@ -25,7 +39,7 @@
 }
 
 .project-info h1 {
-    font-size: 55px;
+    font-size: 40px;
     font-weight: 10000;
      margin-bottom: 10px;
 }
@@ -37,8 +51,8 @@
 }
 
 .project-icons img {
-    height:65px;
-    width:65px;
+    height:40px;
+    width:40px;
 }
 
 .project-image {
@@ -76,7 +90,4 @@
     
 .project-links :hover a{
         font-size: 20px;
-    }
-    
-
-    
+    }   
