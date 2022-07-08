@@ -23,10 +23,11 @@
     display: grid;
     grid-template-columns:1fr 1fr; 
     grid-column-gap: 5px;
-    margin: 0;
+    margin-right : 15px;
     max-width: 1100px;
     height: 100%;
     width: 100%;
+    background-color: gray;
 }
 
 .project-info {
@@ -34,14 +35,14 @@
 
     font-family: 'Noto Serif', serif;
     text-align: left;
-    padding: 15px;
+    padding: 5px;
 
 }
 
 .project-info h1 {
     font-size: 40px;
     font-weight: 10000;
-     margin-bottom: 10px;
+     margin: 0;
 }
 
 .project-icons {
@@ -56,11 +57,12 @@
 }
 
 .project-image {
-    height: 115px;
-    width: 225px;
+    height: 320px;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid #333;
+    border: 1px solid #333;
+    /* padding: 5px; */
 }
 
 .project-image :hover {
