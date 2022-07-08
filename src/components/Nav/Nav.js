@@ -8,6 +8,7 @@ function Nav() {
      <div className={classes["nav-bar-wrapper"]}>
      <nav className={classes["nav-bar"]}>
         {/* <img src="https://i.imgur.com/v7h7Yxp.png" alt="initials" /> */}
+        <h4>Najee Simmons</h4>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
