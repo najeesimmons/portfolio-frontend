@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
-import {
-  Container,
-  ProjectInfo,
-  ProjectImage,
-  ProjectIcons,
-  ProjectLinks,
-} from "./Projects.styles";
 import "./projects.css";
-
+import classes from "./Projects.module.css"
 export const Projects = ({ url }) => {
   // create state to hold about data
   const [projects, setProjects] = useState(null);
@@ -36,10 +29,10 @@ export const Projects = ({ url }) => {
       <div>
         <h1 id="projects">Projects</h1>
         {projects.map((project) => (
-          <Container key={project.name}>
-            <ProjectInfo>
+          <div className={classes.container} key={project.name}>
+            <div className={classes["project-info"]}>
               <h1>{project.name}</h1>
-              <ProjectIcons>
+              <div className={classes["project-icons"]}>
                 {project?.stack?.map((tech) => {
                   return (
                     <div key={tech.technology}>
@@ -47,17 +40,17 @@ export const Projects = ({ url }) => {
                     </div>
                   );
                 })}
-              </ProjectIcons>
-              <ProjectLinks>
+              </div>
+              <div className={classes["project-links"]}>
                 <a href={project.git}>GITHUB</a>
                 <a href={project.live}>LIVE SITE</a>
-              </ProjectLinks>
+              </div>
               <p>{project.description}</p>
-            </ProjectInfo>
-            <ProjectImage>
+            </div>
+            <div className={classes["project-image"]}>
               <img src={project.image} alt={project.name} />
-            </ProjectImage>
-          </Container>
+            </div>
+          </div>
         ))}
       </div>
     );
