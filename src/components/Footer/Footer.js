@@ -1,10 +1,9 @@
-import { PageFooter } from "./Footer.styles";
+import classes from "./Footer.module.css"
 
 function Footer() {
   //inline style for the nav tag
   return (
-    <PageFooter>
-    </PageFooter>
+    <footer className={classes["page-footer"]} />
   );
 }
 
