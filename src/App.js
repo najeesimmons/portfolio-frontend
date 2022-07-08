@@ -1,6 +1,3 @@
-import "./App.css";
-
-
 // IMPORT COMPONENTS
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
