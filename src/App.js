@@ -2,7 +2,7 @@ import "./App.css";
 
 
 // IMPORT COMPONENTS
-import Header from "./components/Nav/Nav";
+import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 // IMPORT PAGES
 import {About} from "./components/About/About";
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Nav />
         <AppWrapper>
         {/* passing the URL variable above as props to the About and Project components */}
           <About url={URL}  />

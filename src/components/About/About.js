@@ -34,7 +34,6 @@ export const About = ({url}) => {
             <AboutMe>
             <MyInfo>
               <h1>{about.name}</h1>
-              <h3>{about.email}</h3>
             </MyInfo>
               <Bio>{about.bio}</Bio>
             </AboutMe>
