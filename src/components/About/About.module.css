@@ -1,17 +1,16 @@
-import styled from 'styled-components';
-
-export const Container = styled.div`
+.container {
   display: grid;
   grid-template-columns: 1fr 1fr; 
   grid-column-gap: 5px;
   margin: 70px auto 0;
   max-width: 1000px;
-`;
+}
 
-export const MyInfo = styled.span`
+.my-info {
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+}
 
-  h1 {
+.my-info h1 {
     padding: 0;
     font-family:'Noto Serif', serif;
     font-size: 80px;
@@ -19,36 +18,35 @@ export const MyInfo = styled.span`
     margin: 0;
   }
 
-  h3 {
+.my-info h3 {
     float: left;
     padding: 0;
   }
-  `;
 
-export const AboutMe = styled.div`
+.about-me {
   font-size: 15px;
   text-align: left;
   padding: 30px; 
-`;
+}
 
-export const Bio = styled.span`
+.bio {
   float: left;
- `;
+}
 
-export const Headshot = styled.div`
+.headshot {
   height: 400px;
   width: 400px;
   margin-left: auto;
   margin-right: auto;
+}
 
-  img {
+.headshot img {
     height: 100%;
     width: 100%;
-   
   }
-  `;
 
-  export const Break = styled.hr`
+
+.break {
     display: block;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -57,4 +55,4 @@ export const Headshot = styled.div`
     border-style: inset;
     border-width: 1px;
     width: 50%;
-`;
+}

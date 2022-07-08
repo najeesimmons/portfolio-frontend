@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {Container, AboutMe, Headshot, MyInfo, Bio, Break} from "./About.styles"
+import classes from "./About.module.css"
 
 export const About = ({url}) => {
   // create state to hold about data
@@ -27,18 +27,18 @@ export const About = ({url}) => {
     // define a function that will return the JSX needed once we get the data
      const loaded = () => (
       <div id="about">
-          <Container>
-            <Headshot>
+          <div className={classes.container}>
+            <div className={classes.headshot}>
               <img src={about.headshot} alt={about.name} />
-            </Headshot>
-            <AboutMe>
-            <MyInfo>
+            </div>
+            <div className={classes["about-me"]}>
+            <span className={classes["my-info"]}>
               <h1>{about.name}</h1>
-            </MyInfo>
-              <Bio>{about.bio}</Bio>
-            </AboutMe>
-          </Container>
-          <Break/>
+            </span>
+              <span className={classes.bio}>{about.bio}</span>
+            </div>
+          </div>
+          <hr className={classes.break}/>
         </div>
   );
 
