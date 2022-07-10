@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classes from "./Projects.module.css"
-
+import ProjectSlider from "../ProjectSlider/ProjectSlider";
 
 
 export const Projects = ({ url }) => {
@@ -35,7 +35,8 @@ export const Projects = ({ url }) => {
       <div className={classes.wrapper}>
         <h1 className={classes["projects-heading"]}>Projects</h1>
         <div className={classes["container-holder"]}>
-        {projects.map((project) => (
+          <ProjectSlider projects={projects} />
+        {/* {projects.map((project) => (
           <div className={classes.container} key={project.name}>
             <div className={classes["project-info"]}>
               <h1>{project.name}</h1>
@@ -58,7 +59,7 @@ export const Projects = ({ url }) => {
               <img src={project.image} alt={project.name} />
             </div>
           </div>
-        ))}
+        ))} */}
         </div>
       </div>
     );

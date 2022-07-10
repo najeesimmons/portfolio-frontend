@@ -7,6 +7,7 @@ import Fullpage, {
 import About from "../About/About";
 import Projects from "../Projects/Projects";
 
+
 export const FullPageScroll = () => {
   const SectionStyle = {
     height: "100vh",

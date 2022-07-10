@@ -6,7 +6,7 @@ import Nav from "./components/Nav/Nav";
 // import Footer from "./components/Footer/Footer";
 
 import FullPageScroll from "./components/FullPageScroll.js/FullPageScroll";
-
+// import ProjectSlider from "./components/ProjectSlider/ProjectSlider";
 // import About from "./components/About/About";
 // import Projects from "./components/Projects/Projects"
 
@@ -21,6 +21,7 @@ function App() {
         {/* <About url={URL}  />
       <Projects url={URL} /> */}
         <FullPageScroll />
+       
       </div>
     </>
   );
