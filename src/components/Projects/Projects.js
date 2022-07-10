@@ -25,10 +25,6 @@ export const Projects = ({ url }) => {
     getProjectsData();
   }, [url]);
 
-  // const projectsList = projects.map(project => {
-
-  // })
-
   // define a function that will return the JSX needed once we get the data
   const loaded = () => {
     return (

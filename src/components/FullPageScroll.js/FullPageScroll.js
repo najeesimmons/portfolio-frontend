@@ -5,7 +5,8 @@ import Fullpage, {
   FullpageNavigation,
 } from "@ap.cx/react-fullpage";
 import About from "../About/About";
-import Projects from "../Projects/Projects";
+// import Projects from "../Projects/Projects";
+import ProjectSlider from "../ProjectSlider/ProjectSlider";
 
 
 export const FullPageScroll = () => {
@@ -27,8 +28,8 @@ export const FullPageScroll = () => {
         <FullpageSection style={SectionStyle}>
           <About url={URL} />
         </FullpageSection>
-        <FullpageSection style={SectionStyle}>
-          <Projects url={URL} />
+        <FullpageSection>
+          <ProjectSlider url={URL} />
         </FullpageSection>
       </FullPageSections>
     </Fullpage>
