@@ -46,7 +46,7 @@ export const About = ({ url }) => {
         <div className={classes["resume-button"]}>
           <a
             href="https://drive.google.com/file/d/1hVGf8htCn6edZCN75myipUh9SvuY7KIP/view?usp=sharing"
-            className={classes["button-link"]}
+            className={classes["button-link"]} rel="noopener noreferrer" target="_blank"
           >
             Resume
           </a>

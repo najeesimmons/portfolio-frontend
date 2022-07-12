@@ -29,10 +29,10 @@ function Nav() {
               <a href="#contact">Contact</a>
             </li>
             <li>
-              <a href="https://github.com/najeesimmons">GitHub</a>
+              <a href="https://github.com/najeesimmons" rel="noopener noreferrer" target="_blank">GitHub</a>
             </li>
             <li>
-              <a href="https://drive.google.com/file/d/1hVGf8htCn6edZCN75myipUh9SvuY7KIP/view?usp=sharing">
+              <a href="https://drive.google.com/file/d/1hVGf8htCn6edZCN75myipUh9SvuY7KIP/view?usp=sharing" rel="noopener noreferrer" target="_blank">
                 Resume
               </a>
             </li>
