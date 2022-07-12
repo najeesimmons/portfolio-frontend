@@ -9,8 +9,9 @@
   font-family: sans-serif;
   font-size: 40px;
   font-weight: 800;
-  margin: 0;
+  margin: 5px 0 10px;
 }
+
 
 .my-info h3 {
   float: left;
@@ -26,8 +27,11 @@
   border-radius: 5px;
 }
 
+
+
 .bio {
   float: left;
+  margin-bottom:30px;
 }
 
 .headshot {
@@ -41,19 +45,24 @@
   height: 100%;
   width: 100%;
 }
-.professional-links {
-  margin-top: 80px;
-}
-
-.professional-links p {
-  display: inline;
-}
 
 .button-link {
-  height: 35px;
-  padding: 10px 20px;
-  background-color: black;
-  color: #eee;
-  text-decoration: none;
-  border-radius: 20px;
+  border: 2px solid black;
+    border-radius: 1px;
+    color: black;
+    font-family: Space Grotesk,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: normal;
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    height: 35px;
 }
+
+.resume-button {
+  margin-top: 50px;
+  white-space: normal;
+}
+
