@@ -6,9 +6,9 @@ const Contact = () => {
     <div className={classes.container}>
       <h1>Get In Touch</h1>
       <p>
-        Thank you for checking out my portfolio! I hope you will reach and say
+        Thank you for checking out my portfolio! I hope you will reach out and say
         hello, whether you want to make me aware of a job opportunity or you
-        just want to say hello. Cheers!
+        just want to talk shop. Cheers!
       </p>
 
       <a href="mailto:najee.bryant.simmons@gmail.com?subject=Hello+World&body=Hello+World">

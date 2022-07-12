@@ -11,7 +11,7 @@ function App() {
 const URL = "https://najee-portfolio-backend.herokuapp.com/";
 
 return (
-<div>
+<div className={classes.wrapper}>
       <Nav />
       <div className={classes.container}>
         <section id="about" className={`${classes.page} ${classes.about}`}>
@@ -24,6 +24,7 @@ return (
           <Contact />
         </section>
       </div>
+      
     </div>
 )}
 

@@ -30,12 +30,23 @@ export const About = ({ url }) => {
       <div className={classes.headshot}>
         <img src={about.headshot} alt={about.name} />
       </div>
+
       <div className={classes["about-me"]}>
         <span className={classes["my-info"]}>
-          <h1>{about.name}</h1>
-          <h3>Front-end Engineer</h3>
+          <p>HI THERE, I'M</p>
+          <h1>
+            <span>Najee</span> Simmons
+          </h1>
         </span>
-        <span className={classes.bio}>{about.bio}</span>
+        <p className={classes.bio}>
+          A <span>Front-End Web Developer</span> who cares <span>deeply</span>{" "}
+          about the experiences users have with his applications. For me, the
+          most rewarding part of my work is helping to solve problems.
+        </p>
+        <div className={classes["professional-links"]} >
+          <a href="https://drive.google.com/file/d/1kJ0ur7QcFvOZsgATNAL_JFJDWjNW2Ru0/view?usp=sharing" className={classes["button-link"]}>Resume</a>
+          <p>ok</p>
+        </div>
       </div>
     </div>
   );

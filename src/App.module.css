@@ -1,8 +1,12 @@
 .app-wrapper {
   max-width: 1440px;
   margin: 0 auto;
+  
 }
-
+.wrapper {
+    background-image: linear-gradient(to right, rgb(232, 232, 222) , rgb(250, 250, 245));
+    /* background-image: linear-gradient(to right, rgb(23, 22, 22) , rgb(69, 69, 65)); */
+}
 .App {
   text-align: center;
 }
@@ -11,6 +15,7 @@
   height: 100%;
   scroll-snap-type: y mandatory;
   overflow: auto;
+
 }
 
 .page {
