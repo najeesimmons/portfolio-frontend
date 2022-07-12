@@ -1,30 +1,30 @@
 import React from "react";
-import classes from "./App.module.css";
-
-
+// import classes from "./App.module.css";
+import About from "./components/About/About";
+import ProjectSlider from "./components/ProjectSlider/ProjectSlider";
+import ContactForm from "./components/ContactForm/ContactForm";
 import Nav from "./components/Nav/Nav";
-// import Footer from "./components/Footer/Footer";
-
-import FullPageScroll from "./components/FullPageScroll.js/FullPageScroll";
-// import ProjectSlider from "./components/ProjectSlider/ProjectSlider";
-// import About from "./components/About/About";
-// import Projects from "./components/Projects/Projects"
+import classes from "./App.module.css"
 
 function App() {
-  // URL should have YOUR HEROKU URL for your backend, make sure you include the trailing slash
-  // const URL = "https://najee-portfolio-backend.herokuapp.com/";
 
-  return (
-    <>
+const URL = "https://najee-portfolio-backend.herokuapp.com/";
+
+return (
+<div>
       <Nav />
-      <div className={classes["app-wrapper"]}>
-        {/* <About url={URL}  />
-      <Projects url={URL} /> */}
-        <FullPageScroll />
-       
+      <div className={classes.container}>
+        <section id="about" className={`${classes.page} ${classes.about}`}>
+          <About url={URL} />
+        </section>
+        <section id='projects' className={classes.page}>
+          <ProjectSlider url={URL} />
+        </section>
+        <section className={classes.page}>
+          <ContactForm id='contact' />
+        </section>
       </div>
-    </>
-  );
-}
+    </div>
+)}
 
 export default App;

@@ -21,7 +21,6 @@ export const About = ({url}) => {
         }
       };
       
-      
   getAboutData()}, [url]);
       
     // define a function that will return the JSX needed once we get the data

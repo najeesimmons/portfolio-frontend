@@ -1,15 +1,25 @@
 .app-wrapper {
-    max-width: 1440px;
-    margin: 0 auto;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .App {
-    text-align: center;
-  }
+  text-align: center;
+}
 
-  
+.container {
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+}
+
+.page {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.about {
+  padding-top: 50px;
+}
 
 
-  
-
-  

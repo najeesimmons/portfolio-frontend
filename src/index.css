@@ -13,6 +13,5 @@ code {
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 50px;
+  scroll-behavior: smooth;  
 }

@@ -1,7 +1,6 @@
 // import KeenSlider from 'keen-slider'
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
-// import classes from "../ProjectSlider/ProjectSlider.module.css";
 import "./projectslider.css";
 import React, { useState, useEffect } from "react";
 
@@ -40,15 +39,18 @@ const ProjectSlider = ({ url }) => {
 
   const renderProjects = () => {
     return (
-      <div ref={sliderRef} className="keen-slider">
+      <div className="container">
+      <div ref={sliderRef} className={"keen-slider"}>
         {projects.map((project, index) => {
           const className = `keen-slider__slide number-slide${index + 1}`;
           return (
             <div key={index + 1} className={className}>
               {project.name}
+              {project.description}
             </div>
           );
         })}
+      </div>
       </div>
     );
   };
