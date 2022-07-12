@@ -11,9 +11,9 @@ const Contact = () => {
         just want to talk shop. Cheers!
       </p>
 
-      <a href="mailto:najee.bryant.simmons@gmail.com?subject=Hello+World&body=Hello+World">
+      <a href="mailto:najee.bryant.simmons@gmail.com?subject=Hello+World&body=Hello+World" className={classes["message-button"]}>Get in Touch
         {" "}
-        <button>Say Hello</button>
+
       </a>
     </div>
   );
