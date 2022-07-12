@@ -32,7 +32,7 @@ function Nav() {
               <a href="https://github.com/najeesimmons">GitHub</a>
             </li>
             <li>
-              <a href="https://drive.google.com/file/d/1kJ0ur7QcFvOZsgATNAL_JFJDWjNW2Ru0/view?usp=sharing">
+              <a href="https://drive.google.com/file/d/1hVGf8htCn6edZCN75myipUh9SvuY7KIP/view?usp=sharing">
                 Resume
               </a>
             </li>

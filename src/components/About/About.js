@@ -45,7 +45,7 @@ export const About = ({ url }) => {
         </p>
         <div className={classes["resume-button"]}>
           <a
-            href="https://drive.google.com/file/d/1kJ0ur7QcFvOZsgATNAL_JFJDWjNW2Ru0/view?usp=sharing"
+            href="https://drive.google.com/file/d/1hVGf8htCn6edZCN75myipUh9SvuY7KIP/view?usp=sharing"
             className={classes["button-link"]}
           >
             Resume
