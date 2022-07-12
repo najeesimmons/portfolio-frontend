@@ -39,7 +39,6 @@ const ProjectSlider = ({ url }) => {
 
   const renderProjects = () => {
     return (
-      <div className="container">
       <div ref={sliderRef} className={"keen-slider"}>
         {projects.map((project, index) => {
           const className = `keen-slider__slide number-slide${index + 1}`;
@@ -50,7 +49,6 @@ const ProjectSlider = ({ url }) => {
             </div>
           );
         })}
-      </div>
       </div>
     );
   };

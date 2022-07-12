@@ -2,7 +2,7 @@ import React from "react";
 // import classes from "./App.module.css";
 import About from "./components/About/About";
 import ProjectSlider from "./components/ProjectSlider/ProjectSlider";
-import ContactForm from "./components/ContactForm/ContactForm";
+import Contact from "./components/Contact/Contact";
 import Nav from "./components/Nav/Nav";
 import classes from "./App.module.css"
 
@@ -20,8 +20,8 @@ return (
         <section id='projects' className={classes.page}>
           <ProjectSlider url={URL} />
         </section>
-        <section className={classes.page}>
-          <ContactForm id='contact' />
+        <section id='contact' className={classes.page}>
+          <Contact />
         </section>
       </div>
     </div>
