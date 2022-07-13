@@ -44,8 +44,23 @@ const ProjectSlider = ({ url }) => {
           const className = `keen-slider__slide number-slide${index + 1}`;
           return (
             <div key={index + 1} className={className}>
-              {project.name}
-              {project.description}
+              <article className="card">
+                <div className="project-image-container">
+                  <img src={project.image} alt={project.name} className="project-image" />
+                </div>
+              <h1 className="name">{project.name}</h1>
+              <ul className="project-icons">
+                {project.stack.map((tech) => {
+                  return (
+                    <li key={tech.technology} className="project-tech">
+                      {tech.technology} </li>
+                  );
+                })}
+              </ul>
+              <div className="description">{project.description}</div>
+              </article>
+             
+
             </div>
           );
         })}
