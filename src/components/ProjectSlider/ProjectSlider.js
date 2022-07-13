@@ -49,6 +49,10 @@ const ProjectSlider = ({ url }) => {
                   <img src={project.image} alt={project.name} className="project-image" />
                 </div>
               <h1 className="name">{project.name}</h1>
+              <div className="site-links">
+                <a href={project.live} alt="link to live project" rel="noopener noreferrer" target="_blank">LIVE</a>
+                <a href={project.git} alt="link to git repository" rel="noopener noreferrer" target="_blank">REPO</a>
+              </div>
               <ul className="project-icons">
                 {project.stack.map((tech) => {
                   return (
@@ -59,10 +63,7 @@ const ProjectSlider = ({ url }) => {
                 })}
               </ul>
               <div className="description">{project.description}</div>
-              <div className="site-links">
-                <a href={project.live} alt="link to live project" rel="noopener noreferrer" target="_blank">LIVE</a>
-                <a href={project.git} alt="link to git repository" rel="noopener noreferrer" target="_blank">REPO</a>
-              </div>
+   
               </article>
              
 
