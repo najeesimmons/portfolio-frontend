@@ -1,6 +1,5 @@
 [class^="number-slide"],
 [class*="number-slide"] {
-  background: grey;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +10,7 @@
   height: 100vh;
 }
 
-.number-slide1 {
+/* .number-slide1 {
   background: rgb(64, 175, 255);
   background: linear-gradient(
     128deg,
@@ -67,7 +66,7 @@
     rgba(64, 76, 255, 1) 0%,
     rgba(174, 63, 255, 1) 100%
   );
-}
+} */
 
 .navigation-wrapper {
   position: relative;
@@ -92,11 +91,22 @@
 
 .project-icons {
   list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.project-icons li:after {
+  content: ", ";
+}
+
+.project-icons li:last-child:after {
+  content: "";
 }
 
 .project-tech {
   display: inline;
 }
+
 .description {
   font: 10px;
 }
@@ -104,4 +114,6 @@
 .card {
   font-size: 20px;
   padding: 20px;
+  border-radius: 5px;
+  background: linear-gradient(128deg, rgb(159, 154, 156) 0%, rgb(2, 2, 2) 100%);
 }

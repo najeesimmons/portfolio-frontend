@@ -6,7 +6,7 @@ header {
 }
 
 .nav-bar-wrapper {
-    background-color: black;
+    background: linear-gradient(128deg, rgb(130, 125, 127) 0%, rgb(2, 2, 2) 100%);
 }
 
 .nav-bar {

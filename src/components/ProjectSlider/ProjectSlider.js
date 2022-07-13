@@ -53,7 +53,8 @@ const ProjectSlider = ({ url }) => {
                 {project.stack.map((tech) => {
                   return (
                     <li key={tech.technology} className="project-tech">
-                      {tech.technology} </li>
+                      {tech.technology} 
+                      </li>
                   );
                 })}
               </ul>
