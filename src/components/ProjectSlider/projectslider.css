@@ -93,10 +93,11 @@
   list-style-type: none;
   padding: 0;
   text-align: center;
+  text-transform: capitalize
 }
 
 .project-icons li:after {
-  content: ", ";
+  content: " | ";
 }
 
 .project-icons li:last-child:after {
