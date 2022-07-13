@@ -115,6 +115,12 @@
   font: 10px;
 }
 
+.site-links {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 .card {
   font-size: 20px;
   padding: 20px;

@@ -12,6 +12,10 @@
   margin: 5px 0 10px;
 }
 
+/* .first-name {
+  color: darkslategrey;
+} */
+
 .my-info h3 {
   float: left;
   padding: 0;
@@ -28,6 +32,10 @@
   text-align: left;
   padding: 30px;
   border-radius: 5px;
+}
+
+.about-me p {
+  font-size: 17px;
 }
 
 .bio {
