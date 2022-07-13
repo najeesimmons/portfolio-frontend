@@ -61,9 +61,14 @@
   text-transform: uppercase;
   text-decoration: none;
   height: 35px;
+  background-color: transparent;
 }
 
 .resume-button {
   margin-top: 50px;
   white-space: normal;
+}
+
+.button-link:hover {
+  border: 3px solid black;
 }
