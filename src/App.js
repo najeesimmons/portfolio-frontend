@@ -17,7 +17,7 @@ return (
         <section id="about" className={`${classes.page} ${classes.about}`}>
           <About url={URL} />
         </section>
-        <section id='projects' className={classes.page}>
+        <section id='projects' className={classes["project-page"]}>
           <ProjectSlider url={URL} />
         </section>
         <section id='contact' className={classes.page}>

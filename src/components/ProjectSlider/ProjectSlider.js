@@ -1,19 +1,9 @@
 // import KeenSlider from 'keen-slider'
-import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react";
 import "./projectslider.css";
 import React, { useState, useEffect } from "react";
 
 const ProjectSlider = ({ url }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [sliderRef] = useKeenSlider({
-    loop: true,
-    // mode: "free",
-    slides: {
-      perView: 3,
-      spacing: 15,
-    },
-  });
 
   // create state to hold about data
   const [projects, setProjects] = useState([]);
@@ -39,34 +29,56 @@ const ProjectSlider = ({ url }) => {
 
   const renderProjects = () => {
     return (
-      <div ref={sliderRef} className={"keen-slider"}>
+      <div className="project-container">
         {projects.map((project, index) => {
-          const className = `keen-slider__slide number-slide${index + 1}`;
           return (
-            <div key={index + 1} className={className}>
-              <article className="card">
-                <div className="project-image-container">
-                  <img src={project.image} alt={project.name} className="project-image" />
-                </div>
-              <h1 className="name">{project.name}</h1>
-              <div className="site-links">
-                <a href={project.live} alt="link to live project" rel="noopener noreferrer" target="_blank">LIVE</a>
-                <a href={project.git} alt="link to git repository" rel="noopener noreferrer" target="_blank">REPO</a>
+            <div key={index + 1} className="card">
+              <div className="project-image-container">
+              
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="project-image"
+                />
               </div>
-              <ul className="project-icons">
-                {project.stack.map((tech) => {
-                  return (
-                    <li key={tech.technology} className="project-tech">
-                      {tech.technology} 
-                      </li>
-                  );
-                })}
-              </ul>
-              <div className="description">{project.description}</div>
-   
-              </article>
-             
+              <div className="project-info-container">
+                <h3 className="name">{project.name}</h3>
+                <h4 className="project-tech">
+                  Technologies Used:
+                  {project.stack.map((tech) => {
+                    return (
+                      <span key={tech.technology} className="project-tech">
+                        {tech.technology}
+                      </span>
+                    );
+                  })}
+                </h4>
 
+                <ul className="description">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+
+                <div className="project-links">
+                  <a
+                    href={project.live}
+                    alt="link to live project"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    LIVE
+                  </a>
+                  <a
+                    href={project.git}
+                    alt="link to git repository"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    REPO
+                  </a>
+                </div>
+              </div>
             </div>
           );
         })}
