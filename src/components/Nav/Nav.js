@@ -17,7 +17,7 @@ function Nav() {
     <header>
       <div className={classes["nav-bar-wrapper"]}>
         <nav className={classes["nav-bar"]}>
-          <img src="https://i.imgur.com/64kA0wp.png" alt="initials" />
+          <img src="https://i.imgur.com/mFSQyiH.png" alt="initials" />
           {/* <img src="https://i.imgur.com/gXgXtXB.png" alt="initials"/> */}
           <ul>
             <li>

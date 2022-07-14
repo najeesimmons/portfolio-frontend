@@ -77,7 +77,6 @@
   width: 348px;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
 .project-image {
@@ -96,6 +95,8 @@
   list-style-type: none;
   padding: 0;
   text-align: center;
+  font-size: 17px;
+  margin-top: 0 px;
   /* text-transform: capitalize */
 }
 
@@ -117,36 +118,32 @@
 
 .site-links {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 
 .site-links a {
-    /* border: 2px solid white;
-    border-radius: 1px; */
-    color: white;
-    font-family: Space Grotesk, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    line-height: normal;
-    padding: 10px 15px;
-    text-align: center;
-    text-transform: uppercase;
-    /* text-decoration: none; */
-    height: 35px;
-  }
-  
-  .site-links a:hover {
-    font-size: 17px;
-  }
+  color: white;
+  font-family: Space Grotesk, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: normal;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  height: 35px;
+}
 
+.site-links a:hover {
+  font-size: 17px;
+}
 
 .card {
   font-size: 20px;
   padding: 20px;
   border-radius: 10px;
-  background:rgb(2, 2, 2);
+  background: rgb(2, 2, 2);
   background: linear-gradient(128deg, rgb(117, 114, 116) 0%, rgb(2, 2, 2) 100%);
-  width:350px;
+  width: 350px;
   height: 500px;
 }

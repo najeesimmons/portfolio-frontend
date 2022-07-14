@@ -55,7 +55,13 @@
   width: 100%;
 }
 
-.button-link {
+.social-container {
+  display: block;
+   /* margin-top: 30px; */
+   align-items: center;
+}
+
+#resume-link {
   border: 2px solid black;
   border-radius: 1px;
   color: black;
@@ -72,11 +78,58 @@
   background-color: transparent;
 }
 
-.resume-button {
+#resume {
   margin-top: 50px;
   white-space: normal;
+  padding: 0;
 }
 
-.button-link:hover {
+#resume-link:hover {
   border: 3px solid black;
+}
+
+.socials-list {
+  display: flex;
+  /* margin-left: 50px; */
+  padding: 0;
+  list-style-type: none;
+}
+
+.socials-list li {
+  margin: 10px 0 0 18px;
+
+}
+
+.socials-list li a {
+  display: inline-block;
+ 
+}
+
+.socials-list li a img {
+  display: inline-block;
+ 
+}
+
+#linkedin {
+  height: 30px;
+  width: 30px;
+  padding-top: 10px;
+  /* display: inline; */
+}
+
+#linkedin img {
+  height: 100%;
+  width: 100%;
+}
+
+#github {
+  height: 33px;
+  width: 33px;
+  padding-top: 8px;
+  /* display: inline; */
+}
+
+#github img {
+  height: 100%;
+  width: 100%;
 }

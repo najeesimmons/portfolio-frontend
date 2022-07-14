@@ -43,13 +43,31 @@ export const About = ({ url }) => {
           about the experiences users have with his applications. For me, the
           most rewarding part of my work is helping to solve problems.
         </p>
-        <div className={classes["resume-button"]}>
+        <div className={classes["social-container"]}>
+          <div id={classes.resume}>
+
           <a
             href="https://drive.google.com/file/d/1hVGf8htCn6edZCN75myipUh9SvuY7KIP/view?usp=sharing"
-            className={classes["button-link"]} rel="noopener noreferrer" target="_blank"
+            id={classes["resume-link"]}
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Resume
           </a>
+
+          </div>
+          <ul className={classes["socials-list"]}>
+            <li id={classes.linkedin}>
+              <a href="https://www.linkedin.com/in/najeesimmons/" alt="linkedin">
+                <img src="https://i.imgur.com/8iFblbv.png" alt="linkedin" />
+              </a>
+            </li>
+            <li id={classes.github}>
+              <a href="https://github.com/najeesimmons" alt="github">
+                <img src="https://i.imgur.com/439XQGH.png" alt="linkedin" />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
