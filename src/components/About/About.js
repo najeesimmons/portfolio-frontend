@@ -59,12 +59,12 @@ export const About = ({ url }) => {
           </div>
           <ul className={classes["socials-list"]}>
             <li id={classes.linkedin}>
-              <a href="https://www.linkedin.com/in/najeesimmons/" alt="linkedin">
+              <a href="https://www.linkedin.com/in/najeesimmons/" alt="linkedin" rel="noopener noreferrer" target="_blank">
                 <img src="https://i.imgur.com/8iFblbv.png" alt="linkedin" />
               </a>
             </li>
             <li id={classes.github}>
-              <a href="https://github.com/najeesimmons" alt="github">
+              <a href="https://github.com/najeesimmons" alt="github" rel="noopener noreferrer" target="_blank">
                 <img src="https://i.imgur.com/439XQGH.png" alt="linkedin" />
               </a>
             </li>
