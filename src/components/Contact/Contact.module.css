@@ -1,7 +1,11 @@
 .container {
-  padding-top: 250px;
-  text-align: center;
   align-items: center;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0px 14px 28px rgba(135, 136, 137, 0.08);
+  width: 1100px;
+  padding: 48px;
+  margin: 0 auto;
 }
 
 .section-heading {
@@ -9,11 +13,22 @@
   letter-spacing: 2px;
   font-size: 1.6rem;
   text-transform: uppercase;
-  
+}
+
+.inner-container {
+  box-shadow: 0px 14px 28px rgba(135, 136, 137, 0.08);
+  background: rgb(232, 231, 231);
+  border-radius: 15px;
+  width: 978px;
+  height: 400px;
+  padding-top: 120px;
+  /* margin-top: 40px; */
+  margin: 0 auto;
 }
 
 h1 {
   font-size: 50px;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -51,4 +66,24 @@ p {
 
 .message-button:hover {
   border: 3px solid black;
+}
+
+.button-holder {
+  text-align: center;
+}
+
+footer {
+  margin-top: 95px;
+  padding: 10px;
+  background: rgb(232, 231, 231);
+}
+
+footer p {
+    width: 350px;
+    margin-top: auto;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
 }

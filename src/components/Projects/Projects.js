@@ -1,5 +1,5 @@
 // import KeenSlider from 'keen-slider'
-import "./projectslider.css";
+import "./projects.css";
 import React, { useState, useEffect } from "react";
 
 const ProjectSlider = ({ url }) => {
@@ -33,9 +33,11 @@ const ProjectSlider = ({ url }) => {
         <h2 className="section-heading">Projects</h2>
         {projects.map((project, index) => {
           return (
-            <div key={index} className={`card${index % 2 ? '-left' : '-right'}`}>
+            <div
+              key={index}
+              className={`card${index % 2 ? "-left" : "-right"}`}
+            >
               <div className="project-image-container">
-              
                 <img
                   src={project.image}
                   alt={project.name}
@@ -57,9 +59,7 @@ const ProjectSlider = ({ url }) => {
 
                 <ul className="description">
                   {project.description.map((attribute) => {
-                    return (
-                      <li key={project.name}>{attribute}</li>
-                    )
+                    return <li key={project.name}>{attribute}</li>;
                   })}
                 </ul>
 
