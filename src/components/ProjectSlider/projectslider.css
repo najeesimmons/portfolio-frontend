@@ -3,6 +3,7 @@
 .project-container {
   background: white;
   border-radius: 50px;
+  box-shadow: 0px 14px 28px rgba(135, 136, 137, 0.08);
   width: 1100px;
   padding: 48px;
   margin: 0 auto;
@@ -10,6 +11,7 @@
 
 .project-container h1{
   color: white;
+  margin-top: 0;
 }
 .description {
   list-style: disc inside;
@@ -32,14 +34,30 @@
   text-decoration: underline;
 }
 
-.card {
+.card-left {
+  font-size: 20px;
+  padding: 30px;
+  background: rgb(232, 231, 231);
+  height: 312px;
+  width: 978px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 0px 14px 28px rgba(135, 136, 137, 0.08);
+  border: 1px solid #eee;
+}
+
+.card-right {
   font-size: 20px;
   padding: 30px;
   background: white;
   height: 312px;
   width: 978px;
+  margin: 0 auto;
   margin-bottom: 10px;
   display: flex;
+  flex-direction: row-reverse;
   border-radius: 15px;
   box-shadow: 0px 14px 28px rgb(134 151 168 / 8%);
   border: 1px solid #eee;

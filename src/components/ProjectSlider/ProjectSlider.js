@@ -32,7 +32,7 @@ const ProjectSlider = ({ url }) => {
       <div className="project-container">
         {projects.map((project, index) => {
           return (
-            <div key={index + 1} className="card">
+            <div key={index} className={`card${index % 2 ? '-left' : '-right'}`}>
               <div className="project-image-container">
               
                 <img
