@@ -33,8 +33,9 @@ export const About = ({ url }) => {
 
       <div className={classes["about-me"]}>
         <span className={classes["my-info"]}>
-          <p className={classes.greeting}>✋ HI, I'M</p>
+          <p className={classes.greeting}><span role="img" alt="waving hand emoji" aria-label="waving hand emoji">✋</span> HI, I'M</p>
           <h1>
+          
             <span className={classes["first-name"]}>Najee</span> Simmons
           </h1>
         </span>

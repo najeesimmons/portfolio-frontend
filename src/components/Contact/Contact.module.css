@@ -1,3 +1,7 @@
+.contact-wrapper {
+  min-height: calc(100vh - 55px);
+}
+
 .container {
   align-items: center;
   background: white;
@@ -72,9 +76,10 @@ p {
 }
 
 footer {
-  margin-top: 95px;
+  margin-top: calc(100% - 55px);
   padding: 10px;
   background: rgb(232, 231, 231);
+  height: 55px;
 }
 
 footer p {

@@ -30,7 +30,7 @@ const ProjectSlider = ({ url }) => {
   const renderProjects = () => {
     return (
       <div className="project-container">
-        <h2 className="section-heading">Projects 💻</h2>
+        <h2 className="section-heading">Projects <span role="img" alt="laptop emoji" aria-label="laptop emoji">💻</span></h2>
         {projects.map((project, index) => {
           return (
             <div
