@@ -1,7 +1,7 @@
 import React from "react";
 // import classes from "./App.module.css";
 import About from "./components/About/About";
-import ProjectSlider from "./components/ProjectSlider/ProjectSlider";
+import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Nav from "./components/Nav/Nav";
 import classes from "./App.module.css"
@@ -18,7 +18,7 @@ return (
           <About url={URL} />
         </section>
         <section id='projects' className={classes["project-page"]}>
-          <ProjectSlider url={URL} />
+          <Projects url={URL} />
         </section>
         <section id='contact' className={classes.page}>
           <Contact />
