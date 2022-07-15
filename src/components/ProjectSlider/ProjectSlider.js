@@ -56,9 +56,11 @@ const ProjectSlider = ({ url }) => {
                 </h4>
 
                 <ul className="description">
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  {project.description.map((attribute) => {
+                    return (
+                      <li key={project.name}>{attribute}</li>
+                    )
+                  })}
                 </ul>
 
                 <div className="project-links">
