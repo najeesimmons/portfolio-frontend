@@ -4,6 +4,7 @@ import classes from "./Contact.module.css";
 const Contact = () => {
   return (
     <div className={classes.container}>
+      {/* <h2 className={classes["section-heading"]}>Contact</h2> */}
       <h1>Get In Touch</h1>
       <p>
         Thank you for checking out my portfolio! I hope you will reach out and say

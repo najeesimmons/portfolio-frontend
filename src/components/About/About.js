@@ -33,7 +33,7 @@ export const About = ({ url }) => {
 
       <div className={classes["about-me"]}>
         <span className={classes["my-info"]}>
-          <p>HI THERE, I'M</p>
+          <p>HI, I'M</p>
           <h1>
             <span className={classes["first-name"]}>Najee</span> Simmons
           </h1>

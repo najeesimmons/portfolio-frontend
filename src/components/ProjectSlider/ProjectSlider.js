@@ -30,6 +30,7 @@ const ProjectSlider = ({ url }) => {
   const renderProjects = () => {
     return (
       <div className="project-container">
+        <h2 className="section-heading">Projects</h2>
         {projects.map((project, index) => {
           return (
             <div key={index} className={`card${index % 2 ? '-left' : '-right'}`}>
