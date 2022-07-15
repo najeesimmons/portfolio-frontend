@@ -1,12 +1,8 @@
-.contact-wrapper {
-  min-height: calc(100vh - 55px);
-}
-
 .container {
   align-items: center;
-  background: white;
+  /* background: white; */
   border-radius: 50px;
-  box-shadow: 0px 14px 28px rgba(135, 136, 137, 0.08);
+  /* box-shadow: 0px 14px 28px rgba(135, 136, 137, 0.08); */
   width: 1100px;
   padding: 48px;
   margin: 0 auto;
@@ -22,26 +18,24 @@
 .inner-container {
   box-shadow: 0px 14px 28px rgba(135, 136, 137, 0.08);
   background: rgb(232, 231, 231);
-  /* border: 1px solid; */
   border-radius: 15px;
-  width: 978px;
-  height: 400px;
+  width: 854px; 
+  height: 350px; 
   padding-top: 120px;
-  /* margin-top: 40px; */
   margin: 0 auto;
 }
 
 .inner-container p {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .thanks {
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 h1 {
   font-size: 50px;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px 0 13px;
 }
 
 p {
@@ -76,18 +70,17 @@ p {
 }
 
 footer {
-  margin-top: calc(100% - 55px);
   padding: 10px;
   background: rgb(232, 231, 231);
   height: 55px;
 }
 
 footer p {
-    width: 350px;
-    margin-top: auto;
-    color: #333;
-    font-size: 1rem;
-    text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 1px;
+  width: 350px;
+  margin-top: auto;
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 1px;
 }

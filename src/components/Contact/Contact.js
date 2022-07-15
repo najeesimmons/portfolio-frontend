@@ -23,9 +23,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      {/* <footer>
+      <footer>
         <p>Designed & Built by Najee Simmons</p>
-      </footer> */}
+      </footer>
     </div>
   );
 };

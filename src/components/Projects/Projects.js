@@ -1,6 +1,8 @@
 // import KeenSlider from 'keen-slider'
 import "./projects.css";
 import React, { useState, useEffect } from "react";
+import flatten from "lodash/flatten";
+import uniq from "lodash/uniq";
 
 const ProjectSlider = ({ url }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,10 +29,28 @@ const ProjectSlider = ({ url }) => {
     getProjectsData();
   }, [url]);
 
+  const technologies = projects.map((p) => p.stack);
+  // return array of objects --- two different arrays
+  console.log("technologies", technologies);
+  console.log("flatten", flatten(technologies));
+  console.log(
+    "flatten with map",
+    flatten(technologies).map((p) => p.technology)
+  );
+  console.log(
+    "uniq with flatten with map",
+    uniq(flatten(technologies).map((p) => p.technology))
+  );
+
   const renderProjects = () => {
     return (
       <div className="project-container">
-        <h2 className="section-heading">Projects <span role="img" alt="laptop emoji" aria-label="laptop emoji">💻</span></h2>
+        <h2 className="section-heading">
+          Projects{" "}
+          <span role="img" alt="laptop emoji" aria-label="laptop emoji">
+            💻
+          </span>
+        </h2>
         {projects.map((project, index) => {
           return (
             <div
