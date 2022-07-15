@@ -8,7 +8,7 @@ const Contact = () => {
         <h2 className={classes["section-heading"]}>Contact</h2>
         <div className={classes["inner-container"]}>
           <h1>Get In Touch</h1>
-          <p>
+          <p className={classes.thanks}>
             Thank you for checking out my portfolio! I hope you'll reach out and
             say hello, whether you want to make me aware of a job opportunity or
             you just want to talk shop. Cheers!
