@@ -8,6 +8,7 @@ header {
 
 .nav-bar-wrapper {
   background: linear-gradient(128deg, rgb(85, 82, 83) 0%, rgb(2, 2, 2) 100%);
+  border-bottom: 1px solid black;
 }
 
 .nav-bar {
