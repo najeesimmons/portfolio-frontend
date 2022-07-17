@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Contact.module.css";
 
+
 const Contact = () => {
   return (
     <div className={classes['contact-wrapper']}>
@@ -23,9 +24,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <footer>
-        <p>Designed & Built by Najee Simmons</p>
-      </footer>
+  
     </div>
   );
 };

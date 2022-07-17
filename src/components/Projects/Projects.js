@@ -44,6 +44,7 @@ const ProjectSlider = ({ url }) => {
 
   const renderProjects = () => {
     return (
+      <div className="project-wrapper">
       <div className="project-container">
         <h2 className="section-heading">
           Projects{" "}
@@ -105,6 +106,7 @@ const ProjectSlider = ({ url }) => {
             </div>
           );
         })}
+      </div>
       </div>
     );
   };

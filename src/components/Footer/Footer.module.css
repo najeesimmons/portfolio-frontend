@@ -1,0 +1,21 @@
+.footer {
+    padding: 10px;
+    
+    height: 55px;
+    max-width: 1440px;
+    /* z-index: 100; */
+
+  }
+
+.footer-wrapper {
+    background: rgb(232, 231, 231);
+}
+
+.signature {
+    width: 350px;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    letter-spacing: 1px;
+  }

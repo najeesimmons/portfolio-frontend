@@ -1,9 +1,13 @@
+.contact-wrapper {
+  margin: 0 auto;
+}
+
 .container {
   align-items: center;
   /* background: white; */
   border-radius: 50px;
   /* box-shadow: 0px 14px 28px rgba(135, 136, 137, 0.08); */
-  width: 1100px;
+  /* max-width: 1000px; */
   padding: 48px;
   margin: 0 auto;
 }
@@ -13,6 +17,7 @@
   letter-spacing: 2px;
   font-size: 1.6rem;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .inner-container {
@@ -22,7 +27,7 @@
   width: 700px; 
   height: 350px; 
   padding-top: 120px;
-  margin: 0 auto;
+  margin: 0 auto 0 20px;
 }
 
 .inner-container p {
@@ -69,18 +74,4 @@ p {
   text-align: center;
 }
 
-footer {
-  padding: 10px;
-  background: rgb(232, 231, 231);
-  height: 55px;
-}
 
-footer p {
-  width: 350px;
-  margin-top: auto;
-  color: #333;
-  font-size: 1rem;
-  text-align: center;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  letter-spacing: 1px;
-}
