@@ -65,7 +65,7 @@ h1 {
 
 @media (max-width: 450px) {
   .inner-container {
-    width: 325px;
+    max-width: 325px;
   }
 }
 

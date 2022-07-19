@@ -149,10 +149,8 @@
 
 @media (max-width: 450px) {
   .headshot {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     margin: 0 auto;
-  
-    /* margin-right: 50px; */
   }
 }
