@@ -62,12 +62,12 @@
   color: rgb(201, 195, 195);
 }
 
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
   .nav-bar {
     max-width: 450px;
 
   }
-}
+} */
 
 @media (max-width: 450px) {
   .nav-bar {
@@ -75,6 +75,7 @@
     /* margin: 0 auto; */
     overflow: hidden;
     display: flex;
+    width: 100%;
     justify-content: space-between;
     max-width: 375px;
   }

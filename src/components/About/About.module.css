@@ -51,8 +51,8 @@
 }
 
 .headshot {
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   /* margin-left: auto; */
   margin-right: 50px;
 }
@@ -141,7 +141,7 @@
 @media (max-width: 450px) {
   .about-container {
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 70px;
     max-width: 325px;
 
   }
@@ -151,6 +151,7 @@
   .headshot {
     height: 300px;
     width: 300px;
+    margin: 0 auto;
   
     /* margin-right: 50px; */
   }
