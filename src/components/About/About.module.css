@@ -142,15 +142,16 @@
   .about-container {
     flex-direction: column;
     margin-top: 100px;
+    max-width: 325px;
 
   }
 }
 
 @media (max-width: 450px) {
   .headshot {
-    height: 200px;
-    width: 200px;
-    /* margin-left: auto; */
-    margin-right: 50px;
+    height: 300px;
+    width: 300px;
+  
+    /* margin-right: 50px; */
   }
 }

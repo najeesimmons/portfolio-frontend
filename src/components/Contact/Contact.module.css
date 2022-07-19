@@ -63,4 +63,21 @@ h1 {
   text-align: center;
 }
 
+@media (max-width: 450px) {
+  .inner-container {
+    width: 325px;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 450px) {
+  .thanks {
+    max-width: 275px;
+  }
+}
 

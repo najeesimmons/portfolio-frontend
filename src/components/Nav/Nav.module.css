@@ -75,9 +75,8 @@
     /* margin: 0 auto; */
     overflow: hidden;
     display: flex;
-    width: 100%;
     justify-content: space-between;
-    max-width: 450px;
+    max-width: 375px;
   }
   }
   @media (max-width: 450px) {
