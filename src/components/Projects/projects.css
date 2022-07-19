@@ -47,7 +47,7 @@
   font-size: 20px;
   padding: 20px;
   background: rgb(232, 231, 231);
-  height: 260px;
+  /* height: 260px; */
   margin: 0 auto;
   margin-bottom: 10px;
   display: flex;
@@ -64,7 +64,7 @@
   font-size: 20px;
   padding: 20px;
   background: white;
-  height: 260px;
+  /* height: 260px; */
   margin: 0 auto;
   margin-bottom: 10px;
   display: flex;
@@ -124,4 +124,23 @@
 
 .project-tech {
   display: inline;
+}
+
+@media (max-width: 450px) {
+  .project-container {
+    padding: 15px;
+    margin: 0 auto;
+  }
+}
+
+@media (maz-width:450px) {
+  .card-left {
+    flex-direction: column;
+  }
+}
+
+@media (maz-width:450px) {
+  .card-right {
+    flex-direction: column;
+  }
 }
