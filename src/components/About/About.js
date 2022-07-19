@@ -26,7 +26,7 @@ export const About = ({ url }) => {
 
   // define a function that will return the JSX needed once we get the data
   const loaded = () => (
-    <div className={classes.container}>
+    <div className={classes["about-container"]}>
       <div className={classes.headshot}>
         <img src={about.headshot} alt={about.name} />
       </div>

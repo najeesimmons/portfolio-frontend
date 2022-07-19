@@ -3,7 +3,7 @@
   margin: 0 auto;
 
 }
-.container {
+.app-container {
   display: flex;
   flex-direction: column;
   scroll-snap-type: y mandatory;
@@ -20,3 +20,4 @@
 .about {
   padding-top: 50px;
 }
+

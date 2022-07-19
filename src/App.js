@@ -14,7 +14,7 @@ function App() {
     <>
       <Nav />
       <div className={classes["app-wrapper"]}>
-        <div className={classes.container}>
+        <div className={classes["app-container"]}>
           <section id="about" className={`${classes.page} ${classes.about}`}>
             <About url={URL} />
           </section>

@@ -5,7 +5,7 @@ import classes from "./Contact.module.css";
 const Contact = () => {
   return (
     <div className={classes['contact-wrapper']}>
-      <div className={classes.container}>
+      <div className={classes["contact-container"]}>
         <div className={classes["inner-container"]}>
           <h1>Get In Touch<span role="img" alt="mailbox emoji" aria-label="mailbox emoji"> 📬</span></h1>
           <p className={classes.thanks}>
