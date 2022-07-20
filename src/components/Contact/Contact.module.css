@@ -63,11 +63,11 @@ h1 {
   text-align: center;
 }
 
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
   .inner-container {
     max-width: 325px;
   }
-}
+} */
 
 @media (max-width: 450px) {
   h1 {

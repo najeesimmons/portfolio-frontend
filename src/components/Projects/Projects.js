@@ -85,6 +85,7 @@ const ProjectSlider = ({ url }) => {
                 </ul>
 
                 <div className="project-links">
+                  <div>
                   <a
                     href={project.live}
                     alt="link to live project"
@@ -101,6 +102,7 @@ const ProjectSlider = ({ url }) => {
                   >
                     REPO
                   </a>
+                  </div>
                 </div>
               </div>
             </div>

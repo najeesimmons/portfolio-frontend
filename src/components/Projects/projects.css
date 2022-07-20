@@ -47,6 +47,7 @@
   font-size: 20px;
   padding: 20px;
   background: rgb(232, 231, 231);
+
   margin: 0 auto;
   margin-bottom: 10px;
   display: flex;
@@ -63,6 +64,7 @@
   font-size: 20px;
   padding: 20px;
   background: white;
+
   margin: 0 auto;
   margin-bottom: 10px;
   display: flex;
@@ -127,7 +129,7 @@
 @media (max-width: 450px) {
   .project-container {
     padding: 15px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 }
 
@@ -159,6 +161,12 @@
   .project-links h4 {
     text-align: center;
     margin-top: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .project-links div {
+    margin: 0 auto;
   }
 }
 /* @media (max-width: 450px) {
