@@ -33,9 +33,17 @@ export const About = ({ url }) => {
 
       <div className={classes["about-me"]}>
         <span className={classes["my-info"]}>
-          <p className={classes.greeting}><span role="img" alt="waving hand emoji" aria-label="waving hand emoji">✋</span> HI, I'M</p>
+          <p className={classes.greeting}>
+            <span
+              role="img"
+              alt="waving hand emoji"
+              aria-label="waving hand emoji"
+            >
+              ✋
+            </span>{" "}
+            HI, I'M
+          </p>
           <h1>
-          
             <span className={classes["first-name"]}>Najee</span> Simmons
           </h1>
         </span>
@@ -46,29 +54,43 @@ export const About = ({ url }) => {
         </p>
         <div className={classes["social-container"]}>
           <div id={classes.resume}>
-
-          <a
-            href="https://drive.google.com/file/d/1hVGf8htCn6edZCN75myipUh9SvuY7KIP/view?usp=sharing"
-            id={classes["resume-link"]}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Resume
-          </a>
-
+            <a
+              href="https://drive.google.com/file/d/1hVGf8htCn6edZCN75myipUh9SvuY7KIP/view?usp=sharing"
+              id={classes["resume-link"]}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Resume
+            </a>
           </div>
-          <ul className={classes["socials-list"]}>
-            <li id={classes.linkedin}>
-              <a href="https://www.linkedin.com/in/najeesimmons/" alt="linkedin" rel="noopener noreferrer" target="_blank">
-                <img src="https://i.imgur.com/8iFblbv.png" alt="linkedin" />
-              </a>
-            </li>
-            <li id={classes.github}>
-              <a href="https://github.com/najeesimmons" alt="github" rel="noopener noreferrer" target="_blank">
-                <img src="https://i.imgur.com/439XQGH.png" alt="linkedin" />
-              </a>
-            </li>
-          </ul>
+          <div className={classes["socials-list-holder"]}>
+            {/* <ul className={classes["socials-list"]}> */}
+              {/* <li id={classes.linkedin}> */}
+              <div id={classes.linkedin}>
+                <a
+                  href="https://www.linkedin.com/in/najeesimmons/"
+                  alt="linkedin"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img src="https://i.imgur.com/8iFblbv.png" alt="linkedin" />
+                </a>
+                </div>
+              {/* </li> */}
+              {/* <li id={classes.github}> */}
+              <div id={classes.github}>
+                <a
+                  href="https://github.com/najeesimmons"
+                  alt="github"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <img src="https://i.imgur.com/439XQGH.png" alt="linkedin" />
+                </a>
+                </div>
+              {/* </li> */}
+            {/* </ul> */}
+          </div>
         </div>
       </div>
     </div>
