@@ -63,13 +63,13 @@ h1 {
   text-align: center;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   h1 {
     font-size: 35px;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .thanks {
     max-width: 275px;
   }

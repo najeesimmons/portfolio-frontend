@@ -43,6 +43,7 @@ const ProjectSlider = ({ url }) => {
   );
 
   const renderProjects = () => {
+    console.log("projects",projects)
     return (
       <div className="project-wrapper">
       <div className="project-container">
@@ -79,8 +80,8 @@ const ProjectSlider = ({ url }) => {
                 </h4>
 
                 <ul className="description">
-                  {project.description.map((attribute) => {
-                    return <li key={project.name}>{attribute}</li>;
+                  {project.description.map((attribute, index) => {
+                    return <li key={index}>{attribute}</li>;
                   })}
                 </ul>
 

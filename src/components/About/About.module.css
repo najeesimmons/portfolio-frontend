@@ -3,7 +3,6 @@
   margin: 0 auto;
   height: 100vh;
   align-items: center;
-  
 }
 
 .greeting {
@@ -43,7 +42,7 @@
 }
 
 .about-me p {
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   font-size: 17px;
 }
 
@@ -103,7 +102,6 @@
   /* height: 35px; */
   width: 35px;
   margin-right: 25px;
-
 }
 
 #linkedin img {
@@ -122,16 +120,15 @@
   width: 100%;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .about-container {
     flex-direction: column;
     margin-top: 70px;
     max-width: 325px;
-
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .headshot {
     height: 250px;
     width: 250px;
@@ -139,8 +136,14 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .my-info h1 {
-  font-size: 35px ;
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-container {
+    margin: 0 auto;
   }
 }

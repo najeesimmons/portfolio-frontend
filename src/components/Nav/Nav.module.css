@@ -73,18 +73,18 @@
     max-width: 375px;
   }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 768px) {
     .nav-bar ul {
       margin: 0;
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 768px) {
     .nav-bar ul li:last-child {
       display: none;
     }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 768px) {
     .nav-bar ul li:nth-last-child(2) {
       display: none;
     }
