@@ -3,12 +3,20 @@ import "./projects.css";
 import React, { useState, useEffect } from "react";
 import flatten from "lodash/flatten";
 import uniq from "lodash/uniq";
+import { FiFilter } from 'react-icons/fi';
 
 const ProjectSlider = ({ url }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   // create state to hold about data
   const [projects, setProjects] = useState([]);
+
+  // state for visibility of filter
+  const [filterIsOpen, setFilterIsOpen] = useState(false)
+
+  const handleClick = (e) => {
+    setFilterIsOpen(!filterIsOpen);
+  }
 
   useEffect(() => {
     // create function to make api call
@@ -52,6 +60,10 @@ const ProjectSlider = ({ url }) => {
           <span role="img" alt="laptop emoji" aria-label="laptop emoji">
             💻
           </span>
+          <button className={`filter-button ${filterIsOpen ? "filter-button-active" : ""}`} onClick={handleClick}>
+            <span>FILTER</span>
+            <span className="filter-icon"><FiFilter/></span>
+          </button>
         </h2>
         {projects.map((project, index) => {
           return (
