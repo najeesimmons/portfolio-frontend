@@ -10,7 +10,6 @@ export const About = ({ url }) => {
     const getAboutData = async () => {
       try {
         const response = await fetch(url + "about");
-        console.log(response);
         // turn response into javascript object
         const data = await response.json();
 
