@@ -4,16 +4,10 @@ import flatten from "lodash/flatten";
 import uniq from "lodash/uniq";
 import { FiFilter } from "react-icons/fi";
 
-const ProjectSlider = ({ url }) => {
+const Projects = ({ url }) => {
   const [isLoading, setIsLoading] = useState(true);
-
-  // create state to hold about data
-  const [projects, setProjects] = useState([]);
-
-  // state for visibility of filter
+  const [projects, setProjects] = useState({ initial: [], current: [] });
   const [filterIsOpen, setFilterIsOpen] = useState(false);
-
-  // set state for filtering options
   const [activeFilter, setActiveFilter] = useState(null);
 
   const handleClick = (e) => {
@@ -22,15 +16,25 @@ const ProjectSlider = ({ url }) => {
 
   const handleTechClick = (e) => {
     setActiveFilter(e.target.value);
-    console.log(activeFilter);
   };
+
+  useEffect(() => {
+    const filtered = projects.initial.filter((project) => {
+      const stack = project.stack.map((s) => s.technology);
+      if (stack.includes(activeFilter)) {
+        return true;
+      }
+      return false;
+    });
+    setProjects((prev) => ({ ...prev, current: filtered }));
+  }, [activeFilter]);
 
   useEffect(() => {
     const getProjectsData = async () => {
       try {
         const response = await fetch(url + "projects");
         const data = await response.json();
-        setProjects(data);
+        setProjects({ initial: data, current: data });
         setIsLoading(false);
       } catch (error) {
         console.error(error);
@@ -39,7 +43,7 @@ const ProjectSlider = ({ url }) => {
     getProjectsData();
   }, [url]);
 
-  const technologies = projects.map((p) => p.stack);
+  const technologies = projects.initial.map((p) => p.stack);
   const techList = uniq(flatten(technologies).map((p) => p.technology));
 
   const techListButtons = techList.map((tech) => {
@@ -83,7 +87,7 @@ const ProjectSlider = ({ url }) => {
           >
             {techListButtons}
           </div>
-          {projects.map((project, index) => {
+          {projects.current.map((project, index) => {
             return (
               <div
                 key={index}
@@ -151,4 +155,4 @@ const ProjectSlider = ({ url }) => {
   return renderProjects();
 };
 
-export default ProjectSlider;
+export default Projects;
