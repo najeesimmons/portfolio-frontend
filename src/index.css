@@ -18,3 +18,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* mobile styles (primary) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+}
+
+/* large tablets & laptops */
+@media screen and (min-width: 960px) {
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px) {
+}
