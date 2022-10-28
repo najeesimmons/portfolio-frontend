@@ -5,7 +5,6 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Nav from "./components/Nav/Nav";
 import classes from "./App.module.css";
-// import Footer from "./components/Footer/Footer";
 
 function App() {
   const URL = "https://najee-portfolio-backend.herokuapp.com/";
@@ -25,7 +24,6 @@ function App() {
             <Contact />
           </section>
         </div>
-        {/* <Footer/> */}
       </div>
     </>
   );

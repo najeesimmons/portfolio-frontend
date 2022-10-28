@@ -1,8 +1,25 @@
-.about-container {
+.headshot {
+  margin: 75px 0 25px 0;
+  grid-column: 2/8;
+  grid-row: 1;
+}
+
+.headshot img {
+  height: 100%;
+  width: 100%;
+}
+
+.about-me {
+  grid-column: 2/8;
+  grid-row: 2;
+  font-size: 1em;
   display: flex;
-  margin: 0 auto;
-  height: 100vh;
-  align-items: center;
+  flex-direction: column;
+}
+
+.about-me p {
+  letter-spacing: 0.5px;
+  font-size: 1em;
 }
 
 .greeting {
@@ -12,69 +29,43 @@
 }
 
 .my-info h1 {
-  padding: 0;
   font-family: sans-serif;
-  font-size: 40px;
+  font-size: 2.25em;
   font-weight: 800;
   text-align: left;
-  margin: 5px 0 10px;
+  margin: 0 0 10px 0;
 }
 
 .my-info h3 {
   float: left;
   padding: 0;
-  margin: 0 0 5px;
-  font-size: 20px;
+  margin: 0 0 5px 0;
+  font-size: 1.5em;
 }
 
 .my-info p {
   padding-bottom: 5px;
 }
 
-.about-me {
-  font-size: 15px;
-  text-align: left;
-  padding: 15px;
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.about-me p {
-  letter-spacing: 0.5px;
-  font-size: 17px;
-}
-
 .bio {
-  float: left;
-  margin: 0 0 40px 0;
-}
-
-.headshot {
-  height: 300px;
-  width: 300px;
-  margin-right: 50px;
-}
-
-.headshot img {
-  height: 100%;
-  width: 100%;
+  margin-bottom: 25px;
 }
 
 .social-container {
   display: flex;
 }
 
+.socials-list-holder {
+  display: flex;
+}
+
 #resume-link {
-  border: 2px solid black;
-  border-radius: 1px;
+  border: 1.5px solid black;
   color: black;
   font-family: Space Grotesk, sans-serif;
-  font-size: 15px;
+  font-size: 1em;
   font-weight: 700;
-  letter-spacing: 3px;
-  line-height: normal;
+  letter-spacing: 1px;
   padding: 10px 15px;
   text-align: center;
   text-transform: uppercase;
@@ -84,22 +75,11 @@
 }
 
 #resume {
-  white-space: normal;
-  padding: 0;
   margin-right: 30px;
   margin-top: 11.5px;
 }
 
-#resume-link:hover {
-  border: 3px solid black;
-}
-
-.socials-list-holder {
-  display: flex;
-}
-
 #linkedin {
-  /* height: 35px; */
   width: 35px;
   margin-right: 25px;
 }
@@ -110,7 +90,6 @@
 }
 
 #github {
-  /* height: 38px; */
   width: 37px;
   margin-right: 25px;
 }
@@ -120,30 +99,14 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    margin-top: 70px;
-    max-width: 325px;
-  }
+/* small tablet styles */
+@media screen and (min-width: 620px) {
 }
 
-@media (max-width: 768px) {
-  .headshot {
-    height: 250px;
-    width: 250px;
-    margin: 0 auto;
-  }
+/* large tablets & laptops */
+@media screen and (min-width: 960px) {
 }
 
-@media (max-width: 768px) {
-  .my-info h1 {
-    font-size: 35px;
-  }
-}
-
-@media (max-width: 768px) {
-  .social-container {
-    margin: 0 auto;
-  }
+/* desktop styles */
+@media screen and (min-width: 1200px) {
 }
