@@ -2,14 +2,21 @@
   display: flex;
   flex-direction: column;
   scroll-snap-type: y mandatory;
-  /* overflow: auto; */
   margin: 0 auto;
-}
-
-.page {
-  height: 100vh;
 }
 
 .about {
   margin-top: 50px;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+}
+
+/* large tablets & laptops */
+@media screen and (min-width: 960px) {
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px) {
 }

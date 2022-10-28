@@ -178,6 +178,12 @@
 
 /* small tablet styles */
 @media screen and (min-width: 620px) {
+  .project-container {
+    padding: 60px;
+  }
+  .card {
+    padding: 40px;
+  }
 }
 
 /* large tablets & laptops */
