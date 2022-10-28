@@ -61,37 +61,39 @@ const Projects = ({ url }) => {
 
   const renderProjects = () => {
     return (
-      <div className="project-wrapper">
-        <div className="project-container">
-          <h2 className="section-heading">
-            Projects{" "}
-            <span role="img" alt="laptop emoji" aria-label="laptop emoji">
-              💻
-            </span>
-          </h2>
-          <button
-            className={`filter-button ${
-              filterIsOpen ? "filter-button-active" : ""
-            }`}
-            onClick={handleClick}
-          >
-            <span>FILTER</span>
-            <span className="filter-icon">
-              <FiFilter />
-            </span>
-          </button>
-          <div
-            className={`filter-choices-box ${
-              filterIsOpen ? "filter-active" : ""
-            }`}
-          >
-            {techListButtons}
-          </div>
+      <div className="project-container" id="projects">
+        <h2 className="section-heading">
+          Projects{" "}
+          <span role="img" alt="laptop emoji" aria-label="laptop emoji">
+            💻
+          </span>
+        </h2>
+        <button
+          className={`filter-button ${
+            filterIsOpen ? "filter-button-active" : ""
+          }`}
+          onClick={handleClick}
+        >
+          <span>FILTER</span>
+          <span className="filter-icon">
+            <FiFilter />
+          </span>
+        </button>
+        <div
+          className={`filter-choices-box ${
+            filterIsOpen ? "filter-active" : ""
+          }`}
+        >
+          {techListButtons}
+        </div>
+        <div className="grid">
           {projects.current.map((project, index) => {
             return (
               <div
                 key={index}
-                className={`card${index % 2 ? "-left" : "-right"}`}
+                className={`${"card"} ${"grid"} ${
+                  index % 2 ? "left" : "right"
+                }`}
               >
                 <div className="project-image-container">
                   <img

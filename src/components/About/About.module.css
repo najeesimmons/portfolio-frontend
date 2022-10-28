@@ -1,3 +1,8 @@
+.about-container {
+  margin-top: 20px;
+  padding: 40px;
+}
+
 .headshot {
   margin: 75px 0 25px 0;
   grid-column: 2/8;
@@ -10,7 +15,7 @@
 }
 
 .about-me {
-  grid-column: 2/8;
+  grid-column: 1/9;
   grid-row: 2;
   font-size: 1em;
   display: flex;
@@ -48,11 +53,12 @@
 }
 
 .bio {
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 .social-container {
   display: flex;
+  margin: 0 auto;
 }
 
 .socials-list-holder {

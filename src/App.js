@@ -14,15 +14,11 @@ function App() {
       <Nav />
       <div className={classes["app-wrapper"]}>
         <div className={classes["app-container"]}>
-          <section id="about" className={`${classes.page} ${classes.about}`}>
-            <About url={URL} />
-          </section>
-          <section id="projects">
-            <Projects url={URL} />
-          </section>
-          <section id="contact" className={classes.page}>
-            <Contact />
-          </section>
+          <About url={URL} />
+
+          <Projects url={URL} />
+
+          <Contact />
         </div>
       </div>
     </>

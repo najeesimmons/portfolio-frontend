@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import classes from "./About.module.css";
-// import "../../index.css"
 
 export const About = ({ url }) => {
   // create state to hold about data
@@ -26,7 +25,7 @@ export const About = ({ url }) => {
 
   // define a function that will return the JSX needed once we get the data
   const loaded = () => (
-    <div className={"grid"}>
+    <div className={`${"grid"} ${classes["about-container"]}`} id="about">
       <div className={classes.headshot}>
         <img src={about.headshot} alt={about.name} />
       </div>

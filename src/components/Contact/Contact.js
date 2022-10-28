@@ -3,7 +3,7 @@ import classes from "./Contact.module.css";
 
 const Contact = () => {
   return (
-    <div className={classes["contact-wrapper"]}>
+    <div className={classes["contact-wrapper"]} id="contact">
       <div className={classes["contact-container"]}>
         <div className={classes["inner-container"]}>
           <h1>
