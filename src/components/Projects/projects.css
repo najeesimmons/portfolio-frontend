@@ -3,8 +3,7 @@
   border-radius: 50px;
   box-shadow: 0px 14px 28px rgba(135, 136, 137, 0.08);
   padding: 20px;
-  margin: 0 auto;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
 }
 
 .section-heading {
@@ -22,15 +21,20 @@
 .card {
   font-size: 20px;
   padding: 30px;
-  margin-bottom: 10px;
   border-radius: 15px;
   box-shadow: 0px 14px 28px rgba(135, 136, 137, 0.08);
   border: 1px solid #eee;
   grid-column: 1/9;
+  max-width: 800px;
+  margin: 0 auto 10px;
 }
 
 .left {
   background: rgb(232, 231, 231);
+}
+
+.left:nth-child(odd) {
+  margin-right: 50px;
 }
 
 .right {
@@ -39,7 +43,6 @@
 }
 
 .project-image-container {
-  margin: 0 auto;
   margin-top: 30px;
   grid-column: 1/9;
   grid-row: 1;
@@ -188,6 +191,17 @@
 
 /* large tablets & laptops */
 @media screen and (min-width: 960px) {
+  .project-container {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+  }
+  .card {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .project-image-container {
+    width: 80%;
+  }
 }
 
 /* desktop styles */

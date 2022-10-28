@@ -1,19 +1,17 @@
 .footer {
-    padding: 10px;
-    
     height: 55px;
-    max-width: 1440px;
-    /* z-index: 100; */
-
+    background: linear-gradient(128deg, rgb(85, 82, 83) 0%, rgb(2, 2, 2) 100%);
+    padding: 20px 100px;
+    overflow-x: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
   }
 
-.footer-wrapper {
-    background: rgb(232, 231, 231);
-}
 
 .signature {
-    width: 350px;
-    color: #333;
+    grid-column: 2/8;
+    color: white;
     font-size: 1rem;
     text-align: center;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;

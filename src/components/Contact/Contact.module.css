@@ -58,6 +58,11 @@ h1 {
   .contact-container {
     padding: 80px;
   }
+  .inner-container {
+    padding: 80px 0 75px;
+    max-width: 650px;
+    margin: 0 auto;
+  }
   .thanks {
     padding: 20px 50px 40px;
   }
