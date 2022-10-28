@@ -1,26 +1,40 @@
-// import KeenSlider from 'keen-slider'
 import "./projects.css";
 import React, { useState, useEffect } from "react";
 import flatten from "lodash/flatten";
 import uniq from "lodash/uniq";
+import { FiFilter } from "react-icons/fi";
 
-const ProjectSlider = ({ url }) => {
+const Projects = ({ url }) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [projects, setProjects] = useState({ initial: [], current: [] });
+  const [filterIsOpen, setFilterIsOpen] = useState(false);
+  const [activeFilter, setActiveFilter] = useState(null);
 
-  // create state to hold about data
-  const [projects, setProjects] = useState([]);
+  const handleClick = (e) => {
+    setFilterIsOpen(!filterIsOpen);
+  };
+
+  const handleTechClick = (e) => {
+    setActiveFilter(e.target.value);
+  };
 
   useEffect(() => {
-    // create function to make api call
+    const filtered = projects.initial.filter((project) => {
+      const stack = project.stack.map((s) => s.technology);
+      if (stack.includes(activeFilter)) {
+        return true;
+      }
+      return false;
+    });
+    setProjects((prev) => ({ ...prev, current: filtered }));
+  }, [activeFilter]);
+
+  useEffect(() => {
     const getProjectsData = async () => {
       try {
         const response = await fetch(url + "projects");
-        // turn response into javascript object
         const data = await response.json();
-
-        // set the about state to the data
-
-        setProjects(data);
+        setProjects({ initial: data, current: data });
         setIsLoading(false);
       } catch (error) {
         console.error(error);
@@ -29,87 +43,109 @@ const ProjectSlider = ({ url }) => {
     getProjectsData();
   }, [url]);
 
-  const technologies = projects.map((p) => p.stack);
-  // return array of objects --- two different arrays
-  console.log("technologies", technologies);
-  console.log("flatten", flatten(technologies));
-  console.log(
-    "flatten with map",
-    flatten(technologies).map((p) => p.technology)
-  );
-  console.log(
-    "uniq with flatten with map",
-    uniq(flatten(technologies).map((p) => p.technology))
-  );
+  const technologies = projects.initial.map((p) => p.stack);
+  const techList = uniq(flatten(technologies).map((p) => p.technology));
+
+  const techListButtons = techList.map((tech) => {
+    return (
+      <button
+        className="filter-tech-button"
+        onClick={handleTechClick}
+        key={tech}
+        value={tech}
+      >
+        {tech}
+      </button>
+    );
+  });
 
   const renderProjects = () => {
-    console.log("projects",projects)
     return (
-      <div className="project-wrapper">
-      <div className="project-container">
+      <div className="project-container" id="projects">
         <h2 className="section-heading">
           Projects{" "}
           <span role="img" alt="laptop emoji" aria-label="laptop emoji">
             💻
           </span>
         </h2>
-        {projects.map((project, index) => {
-          return (
-            <div
-              key={index}
-              className={`card${index % 2 ? "-left" : "-right"}`}
-            >
-              <div className="project-image-container">
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="project-image"
-                />
-              </div>
-              <div className="project-info-container">
-                <h3 className="name">{project.name}</h3>
-                <h4 className="project-tech">
-                  Technologies Used:
-                  {project.stack.map((tech) => {
-                    return (
-                      <span key={tech.technology} className="project-tech">
-                        {tech.technology}
-                      </span>
-                    );
-                  })}
-                </h4>
+        <button
+          className={`filter-button ${
+            filterIsOpen ? "filter-button-active" : ""
+          }`}
+          onClick={handleClick}
+        >
+          <span>FILTER</span>
+          <span className="filter-icon">
+            <FiFilter />
+          </span>
+        </button>
+        <div
+          className={`filter-choices-box ${
+            filterIsOpen ? "filter-active" : ""
+          }`}
+        >
+          {techListButtons}
+        </div>
+        <div className="grid">
+          {projects.current.map((project, index) => {
+            return (
+              <div
+                key={index}
+                className={`${"card"} ${"grid"} ${
+                  index % 2 ? "left" : "right"
+                }`}
+              >
+                <div className="project-image-container">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="project-image"
+                  />
+                </div>
+                <div className="project-info-container">
+                  <h3 className="name">{project.name}</h3>
+                  <h4 className="project-tech">
+                    Technologies Used:
+                    {project.stack.map((tech) => {
+                      return (
+                        <span key={tech.technology} className="project-tech">
+                          {tech.technology}
+                        </span>
+                      );
+                    })}
+                  </h4>
 
-                <ul className="description">
-                  {project.description.map((attribute, index) => {
-                    return <li key={index}>{attribute}</li>;
-                  })}
-                </ul>
+                  <ul className="description">
+                    {project.description.map((attribute, index) => {
+                      return <li key={index}>{attribute}</li>;
+                    })}
+                  </ul>
 
-                <div className="project-links">
-                  <div>
-                  <a
-                    href={project.live}
-                    alt="link to live project"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    LIVE
-                  </a>
-                  <a
-                    href={project.git}
-                    alt="link to git repository"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    REPO
-                  </a>
+                  <div className="project-links">
+                    <div>
+                      <a
+                        href={project.live}
+                        alt="link to live project"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        LIVE
+                      </a>
+                      <a
+                        href={project.git}
+                        alt="link to git repository"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        REPO
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
       </div>
     );
   };
@@ -121,4 +157,4 @@ const ProjectSlider = ({ url }) => {
   return renderProjects();
 };
 
-export default ProjectSlider;
+export default Projects;
