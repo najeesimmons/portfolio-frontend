@@ -32,7 +32,7 @@ function Nav() {
           </li>
           <li className={classes["nav-item"]}>
             <a
-              href="https://drive.google.com/file/d/1hVGf8htCn6edZCN75myipUh9SvuY7KIP/view?usp=sharing"
+              href="https://drive.google.com/file/d/10888rfeezoSZ6VzjLi2aGFvhWjYza6bj/view?usp=share_link"
               rel="noopener noreferrer"
               target="_blank"
               className={classes["nav-link"]}

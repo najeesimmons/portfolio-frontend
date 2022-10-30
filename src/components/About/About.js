@@ -49,7 +49,7 @@ export const About = ({ url }) => {
         <div className={classes["social-container"]}>
           <div id={classes.resume}>
             <a
-              href="https://drive.google.com/file/d/1hVGf8htCn6edZCN75myipUh9SvuY7KIP/view?usp=sharing"
+              href="https://drive.google.com/file/d/10888rfeezoSZ6VzjLi2aGFvhWjYza6bj/view?usp=share_link"
               id={classes["resume-link"]}
               rel="noopener noreferrer"
               target="_blank"
