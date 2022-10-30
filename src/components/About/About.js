@@ -2,18 +2,15 @@ import React, { useState, useEffect } from "react";
 import classes from "./About.module.css";
 
 export const About = ({ url }) => {
-  // create state to hold about data
   const [about, setAbout] = useState(null);
 
   useEffect(() => {
-    // create function to make api call
     const getAboutData = async () => {
       try {
         const response = await fetch(url + "about");
         // turn response into javascript object
         const data = await response.json();
 
-        // set the about state to the data
         setAbout(data);
       } catch (error) {
         console.error(error);
@@ -61,8 +58,6 @@ export const About = ({ url }) => {
             </a>
           </div>
           <div className={classes["socials-list-holder"]}>
-            {/* <ul className={classes["socials-list"]}> */}
-            {/* <li id={classes.linkedin}> */}
             <div id={classes.linkedin}>
               <a
                 href="https://www.linkedin.com/in/najeesimmons/"
@@ -73,8 +68,6 @@ export const About = ({ url }) => {
                 <img src="https://i.imgur.com/8iFblbv.png" alt="linkedin" />
               </a>
             </div>
-            {/* </li> */}
-            {/* <li id={classes.github}> */}
             <div id={classes.github}>
               <a
                 href="https://github.com/najeesimmons"
@@ -85,15 +78,12 @@ export const About = ({ url }) => {
                 <img src="https://i.imgur.com/439XQGH.png" alt="linkedin" />
               </a>
             </div>
-            {/* </li> */}
-            {/* </ul> */}
           </div>
         </div>
       </div>
     </div>
   );
 
-  // if data arrives return the result of loaded, if not, an h1 that says loading
   return about ? loaded() : <h1>Loading...</h1>;
 };
 
