@@ -1,40 +1,53 @@
-import React from "react";
+import { set } from "lodash";
+import React, { useState } from "react";
 import classes from "./Nav.module.css";
 
 function Nav() {
+  const [hamburgerIsActive, setHamburgerIsActive] = useState(false)
+  
+  const removeActiveStatus = () => setHamburgerIsActive(false);
   return (
     <div className={classes["nav-bar-wrapper"]}>
       <nav className={classes["nav-bar"]}>
         <img src="https://i.imgur.com/mFSQyiH.png" alt="initials" />
-        <ul>
-          <li>
-            <a href="#about">About</a>
+        <ul className={`${classes["nav-menu"]} ${hamburgerIsActive ? classes.active : ""}`}>
+          <li className={classes["nav-item"]}>
+            <a href="#about" className={classes["nav-link"]} onClick={removeActiveStatus}>About</a>
           </li>
-          <li>
-            <a href="#projects">Projects</a>
+          <li className={classes["nav-item"]}>
+            <a href="#projects" className={classes["nav-link"]} onClick={removeActiveStatus}>Projects</a>
           </li>
-          <li>
-            <a href="#contact">Contact</a>
+          <li className={classes["nav-item"]}>
+            <a href="#contact" className={classes["nav-link"]} onClick={removeActiveStatus}>Contact</a>
           </li>
-          <li>
+          <li className={classes["nav-item"]}>
             <a
               href="https://github.com/najeesimmons"
               rel="noopener noreferrer"
               target="_blank"
+              className={classes["nav-link"]}
+              onClick={removeActiveStatus}
             >
               GitHub
             </a>
           </li>
-          <li>
+          <li className={classes["nav-item"]}>
             <a
               href="https://drive.google.com/file/d/1hVGf8htCn6edZCN75myipUh9SvuY7KIP/view?usp=sharing"
               rel="noopener noreferrer"
               target="_blank"
+              className={classes["nav-link"]}
+              onClick={removeActiveStatus}
             >
               Resume
             </a>
           </li>
         </ul>
+        <div className={`${classes.hamburger} ${hamburgerIsActive ? classes.active : ""}`} onClick={() => setHamburgerIsActive(!hamburgerIsActive)}>
+          <span className={classes.bar}></span>
+          <span className={classes.bar}></span>
+          <span className={classes.bar}></span>
+        </div>
       </nav>
     </div>
   );
