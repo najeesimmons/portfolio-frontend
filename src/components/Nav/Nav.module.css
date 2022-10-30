@@ -22,23 +22,24 @@
 
 .nav-menu {
   position: fixed;
-  left: -100%;
+  right: -100%;
   top: 60px;
   gap: 0;
   flex-direction: column;
   background: black;
+  opacity: 0.9;
   width: 100%;
   text-align: center;
   transition: 0.3s;
   display: flex;
   align-items: center;
   list-style: none;
-  margin: 0 50px 0 0;
+  margin: 0;
   padding: 0;
 }
 
 .nav-menu.active {
-  left: 0;
+  right: 0;
 }
 
 .nav-item {
@@ -77,7 +78,6 @@
 }
 
 .hamburger {
-  /* display: none; */
   cursor: pointer;
   margin-right: 50px;
   display: block;
@@ -102,4 +102,53 @@
   margin: 5px 0;
   transition: all 0.3s ease;
   background: white;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+}
+
+/* large tablets & laptops */
+@media screen and (min-width: 960px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: min-content;
+    background: none;
+    opacity: 0.9;
+    list-style: none;
+    margin: 0 50px 0 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+  }
+
+  .nav-item {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .nav-link {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    color: rgb(201, 195, 195);
+  }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px) {
 }
