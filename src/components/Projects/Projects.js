@@ -1,8 +1,5 @@
 import "./projects.css";
 import React from "react";
-// import flatten from "lodash/flatten";
-// import uniq from "lodash/uniq";
-// import { FiFilter } from "react-icons/fi";
 
 const Projects = ({ projects }) => {
   const loaded = () => {
