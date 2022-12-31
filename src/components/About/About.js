@@ -1,26 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import classes from "./About.module.css";
 
-export const About = ({ url }) => {
-  const [about, setAbout] = useState(null);
-
-  useEffect(() => {
-    const getAboutData = async () => {
-      try {
-        const response = await fetch(url + "about");
-        // turn response into javascript object
-        const data = await response.json();
-
-        setAbout(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    getAboutData();
-  }, [url]);
-
-  // define a function that will return the JSX needed once we get the data
+export const About = ({ about }) => {
   const loaded = () => (
     <div className={`${"grid"} ${classes["about-container"]}`} id="about">
       <div className={classes.headshot}>

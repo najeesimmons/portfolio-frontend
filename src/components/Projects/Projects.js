@@ -4,9 +4,7 @@ import flatten from "lodash/flatten";
 import uniq from "lodash/uniq";
 import { FiFilter } from "react-icons/fi";
 
-const Projects = ({ url }) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [projects, setProjects] = useState({ initial: [], current: [] });
+const Projects = ({ projects }) => {
   const [filterIsOpen, setFilterIsOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState(null);
 
@@ -19,31 +17,16 @@ const Projects = ({ url }) => {
   };
 
   useEffect(() => {
-    const filtered = projects.initial.filter((project) => {
+    const filtered = projects.filter((project) => {
       const stack = project.stack.map((s) => s.technology);
       if (stack.includes(activeFilter)) {
         return true;
       }
       return false;
     });
-    setProjects((prev) => ({ ...prev, current: filtered }));
   }, [activeFilter]);
 
-  useEffect(() => {
-    const getProjectsData = async () => {
-      try {
-        const response = await fetch(url + "projects");
-        const data = await response.json();
-        setProjects({ initial: data, current: data });
-        setIsLoading(false);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    getProjectsData();
-  }, [url]);
-
-  const technologies = projects.initial.map((p) => p.stack);
+  const technologies = projects.map((p) => p.stack);
   const techList = uniq(flatten(technologies).map((p) => p.technology));
 
   const techListButtons = techList.map((tech) => {
@@ -59,7 +42,7 @@ const Projects = ({ url }) => {
     );
   });
 
-  const renderProjects = () => {
+  const loaded = () => {
     return (
       <div className="project-container" id="projects">
         <h2 className="section-heading">
@@ -87,7 +70,7 @@ const Projects = ({ url }) => {
           {techListButtons}
         </div>
         <div className="grid">
-          {projects.current.map((project, index) => {
+          {projects.map((project, index) => {
             return (
               <div
                 key={index}
@@ -150,11 +133,7 @@ const Projects = ({ url }) => {
     );
   };
 
-  if (isLoading) {
-    return <h1>Loading...</h1>;
-  }
-
-  return renderProjects();
+  return projects ? loaded() : <h1>Loading...</h1>;
 };
 
 export default Projects;
