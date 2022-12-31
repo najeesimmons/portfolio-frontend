@@ -65,7 +65,7 @@ export const About = ({ about }) => {
     </div>
   );
 
-  return about ? loaded() : <h1>Loading...</h1>;
+  return about ? loaded() : <h1>Unable to access data...</h1>;
 };
 
 export default About;

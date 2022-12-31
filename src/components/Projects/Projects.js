@@ -1,47 +1,10 @@
 import "./projects.css";
-import React, { useState, useEffect } from "react";
-import flatten from "lodash/flatten";
-import uniq from "lodash/uniq";
-import { FiFilter } from "react-icons/fi";
+import React from "react";
+// import flatten from "lodash/flatten";
+// import uniq from "lodash/uniq";
+// import { FiFilter } from "react-icons/fi";
 
 const Projects = ({ projects }) => {
-  const [filterIsOpen, setFilterIsOpen] = useState(false);
-  const [activeFilter, setActiveFilter] = useState(null);
-
-  const handleClick = (e) => {
-    setFilterIsOpen(!filterIsOpen);
-  };
-
-  const handleTechClick = (e) => {
-    setActiveFilter(e.target.value);
-  };
-
-  useEffect(() => {
-    const filtered = projects.filter((project) => {
-      const stack = project.stack.map((s) => s.technology);
-      if (stack.includes(activeFilter)) {
-        return true;
-      }
-      return false;
-    });
-  }, [activeFilter]);
-
-  const technologies = projects.map((p) => p.stack);
-  const techList = uniq(flatten(technologies).map((p) => p.technology));
-
-  const techListButtons = techList.map((tech) => {
-    return (
-      <button
-        className="filter-tech-button"
-        onClick={handleTechClick}
-        key={tech}
-        value={tech}
-      >
-        {tech}
-      </button>
-    );
-  });
-
   const loaded = () => {
     return (
       <div className="project-container" id="projects">
@@ -51,24 +14,6 @@ const Projects = ({ projects }) => {
             💻
           </span>
         </h2>
-        <button
-          className={`filter-button ${
-            filterIsOpen ? "filter-button-active" : ""
-          }`}
-          onClick={handleClick}
-        >
-          <span>FILTER</span>
-          <span className="filter-icon">
-            <FiFilter />
-          </span>
-        </button>
-        <div
-          className={`filter-choices-box ${
-            filterIsOpen ? "filter-active" : ""
-          }`}
-        >
-          {techListButtons}
-        </div>
         <div className="grid">
           {projects.map((project, index) => {
             return (
@@ -133,7 +78,7 @@ const Projects = ({ projects }) => {
     );
   };
 
-  return projects ? loaded() : <h1>Loading...</h1>;
+  return projects ? loaded() : <h1>Unable to access project data...</h1>;
 };
 
 export default Projects;
