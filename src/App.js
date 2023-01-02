@@ -36,28 +36,6 @@ function App() {
       ],
     },
     {
-      name: "Open Source Kitchen",
-      description: [
-        "A reciple blog featuring full CRUD functionality.",
-        "Combines the power of Mongoose and EJS to query and render data.",
-      ],
-      live: "https://open-source-kitchen.herokuapp.com/recipeblog/home",
-      git: "https://github.com/najeesimmons/open-source-kitchen-v2",
-      image: "https://i.imgur.com/9HobOS5.png",
-      stack: [
-        { technology: "html", image: "https://i.imgur.com/oL03xZA.png" },
-        { technology: "css", image: "https://i.imgur.com/Z7HCQq7.png" },
-        {
-          technology: "javascript",
-          image: "https://i.imgur.com/DIDhXm4.png",
-        },
-        { technology: "ejs", image: "none" },
-        { technology: "mongoDB", image: "https://i.imgur.com/qWx6Ldm.png" },
-        { technology: "express", image: "https://i.imgur.com/qWWnmND.png" },
-        { technology: "node.js", image: "https://i.imgur.com/AGudz0o.png" },
-      ],
-    },
-    {
       name: "Wordle +",
       description: [
         "Pure Javascript clone of the popular game Wordle",
