@@ -23,9 +23,8 @@ export const About = ({ about }) => {
           <h1>Najee Simmons</h1>
         </span>
         <p className={classes.bio}>
-          A Software Developer who cares <span>deeply</span> about the
-          experiences users have with his applications. For me, the most
-          rewarding part of my work is helping to solve problems.
+          The best part of my job is building software that solves problems. I
+          do my best work when I know I’m helping others.
         </p>
         <div className={classes["social-container"]}>
           <div id={classes.resume}>
