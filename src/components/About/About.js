@@ -24,7 +24,7 @@ export const About = ({ about }) => {
         </span>
         <p className={classes.bio}>
           The best part of my job is building software that solves problems. I
-          do my best work when I know I’m helping others.
+          do my greatest work when I know I’m helping others.
         </p>
         <div className={classes["social-container"]}>
           <div id={classes.resume}>
