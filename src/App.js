@@ -8,13 +8,15 @@ import classes from "./App.module.css";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  // in the past, I hosted server on heroku for free at this URL, free service is no longer available 
+  // in the past, I hosted server on heroku for free at this URL, free service is no longer available
   // const URL = "https://najee-portfolio-backend.herokuapp.com/";
 
   const about = {
     name: "Najee Simmons",
     email: "najee.bryant.simmons@gmail.com",
-    headshot: "https://i.imgur.com/mlCcXQu.png"
+    headshot: "https://i.imgur.com/mlCcXQu.png",
+    blurb:
+      "Passionate software engineer with professional experience building scalable, feature-rich web applications, optimizing frontend usability, and developing robust backend solutions to support high-traffic platforms.",
   };
 
   const projects = [

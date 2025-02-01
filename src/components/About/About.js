@@ -23,8 +23,10 @@ export const About = ({ about }) => {
           <h1>Najee Simmons</h1>
         </span>
         <p className={classes.bio}>
-          The best part of my job is building software that solves problems. I
-          do my greatest work when I know I’m helping others.
+          Passionate software engineer with professional experience building
+          scalable, feature-rich web applications, optimizing frontend
+          usability, and developing robust backend solutions to support
+          high-traffic platforms.
         </p>
         <div className={classes["social-container"]}>
           <div id={classes.resume}>
